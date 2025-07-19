@@ -2,88 +2,30 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-import random
 from sklearn.linear_model import LinearRegression
 
 # Konfigurasi halaman
 st.set_page_config(page_title="Simulator Kimia", layout="wide")
-st.info("💡 **Tips:** Gunakan menu sebelah kiri untuk navigasi antar modul aplikasi.")
-
-def halaman_beranda(): 
-    st.markdown(
-        """
-        <style>
-        .big-font {
-            font-size: 48px !important;
-            font-weight: 700;
-            color: #2C3E50;
-        }
-        .medium-font {
-            font-size: 24px !important;
-            color: #34495E;
-        }
-        .highlight {
-            background-color: #D6EAF8;
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            font-size: 18px;
-            color: #154360;
-        }
-        </style>
-        """, unsafe_allow_html=True
-    )
-
-    st.markdown('<p class="big-font">💡 Aplikasi Simulator Instrumen Kimia</p>', unsafe_allow_html=True)
-    st.markdown('<p class="medium-font">Selamat Datang 👋</p>', unsafe_allow_html=True)
-    
-    st.markdown(
-        """
-        <div class="highlight">
-        Aplikasi ini membantu Anda memahami berbagai <em>simulasi instrumen laboratorium kimia</em>,  
-        serta menyediakan panduan <em>penanganan bahan kimia</em> dan <em>keselamatan kerja (K3)</em>.
-        </div>
-        """, unsafe_allow_html=True
-    )
-
-    st.markdown("---")
-
-    st.markdown("## 📋 Menu Utama")
-
-    col1, col2 = st.columns(2)
-
-    with col1:
-        st.markdown("### 🏠 Beranda")
-        st.write("Halaman utama aplikasi dengan pengantar dan ringkasan fitur.")
-        st.markdown("### 🧪 Spektrofotometer")
-        st.write("Simulasi dan panduan penggunaan alat spektrofotometer.")
-        st.markdown("### 🧴 Penanganan Bahan Kimia")
-        st.write("Tips dan aturan penanganan bahan kimia yang aman.")
-    
-    with col2:
-        st.markdown("### 🛡️ Keselamatan Kerja (K3)")
-        st.write("Informasi dan prosedur keselamatan kerja laboratorium.")
-        st.markdown("### 🧰 Alat Dasar Lab")
-        st.write("Panduan alat gelas dasar laboratorium dan simulasi pengukuran volume.")
-
-# Untuk testing lokal kamu bisa panggil fungsi ini
-if __name__ == "__main__":
-    halaman_beranda()
 
 # Sidebar menu
-menu = st.sidebar.selectbox("Pilih Menu", [
-    "🏠 Beranda",
-    "🧪 Spektrofotometer",
-    "🧴 Penanganan Bahan Kimia",
-    "🛡 Keselamatan Kerja (K3)",
-    "🧰 Alat Dasar Lab"
-])
+menu = st.sidebar.selectbox(
+    "Pilih Halaman",
+    (
+        "🏠 Beranda",
+        "🔬 Spektrofotometer",
+        "🧴 Penanganan Bahan Kimia",
+        "🛡 Keselamatan Kerja (K3)"
+    )
+)
 
 # ==================== Halaman Beranda ====================
 if menu == "🏠 Beranda":
-    # kode untuk halaman beranda di sini
-    st.title("🏠 Beranda")
-    st.write("Ini adalah halaman beranda")
+    st.title("💡 Aplikasi Simulator Instrumen Kimia")
+    st.markdown("""
+    ## Selamat Datang 👋
+    Aplikasi ini membantu Anda memahami berbagai *simulasi instrumen laboratorium kimia*, 
+    serta menyediakan panduan *penanganan bahan kimia* dan *keselamatan kerja (K3)*.
+    """)
 
 # ==================== Halaman Spektrofotometer ====================
 elif menu == "🔬 Spektrofotometer":
@@ -189,7 +131,7 @@ elif menu == "🧴 Penanganan Bahan Kimia":
         "Asam Sulfat (H₂SO₄)",
         "Natrium Hidroksida (NaOH)",
         "Aseton (CH₃COCH₃)",
-        "Hidrogen Peroksida (H₂O₂)",
+        "Hidrogen Peroksida (H₂O₂)"
         "Klorin (Cl₂)",
         "Metanol (CH₃OH)",
         "Amonia (NH₃)",
@@ -545,219 +487,7 @@ elif menu == "🧴 Penanganan Bahan Kimia":
 
 # ==================== Halaman K3 ====================
 elif menu == "🛡 Keselamatan Kerja (K3)":
-    st.title("🧪🔬 Keselamatan Kerja di Laboratorium Kimia 🧤🦺")
-
-    st.markdown("""
-    ---
-
-## 📚 *Pendahuluan*
-Keselamatan kerja 🔒 di laboratorium adalah hal yang sangat penting untuk:
-- 🛑 Menghindari kecelakaan
-- ⚠ Mengurangi risiko paparan bahan berbahaya
-- 👨‍🔬 Menciptakan lingkungan kerja yang aman dan tertib
-
----
-
-## 🛡 *Prinsip Umum Keselamatan*
-
-🔸 *Kenali bahan kimia* sebelum digunakan (baca label & MSDS)  
-🔸 *Gunakan APD (Alat Pelindung Diri):*  
-  🧥 Jas lab 👓 Kacamata 🧤 Sarung tangan  
-🔸 *Dilarang keras:* 🍔 Makan, 🍵 Minum, dan 💄 Make-up di lab  
-🔸 *Cuci tangan* 🧼 sebelum dan sesudah praktikum  
-🔸 *Jaga meja tetap rapi dan bersih* 🧹
-
----
-
-## 🔥 *Penanganan Bahan Kimia Berbahaya*
-
-☠ Hindari menghirup langsung bahan beracun  
-🌬 Gunakan *lemari asam* saat menangani bahan volatil  
-🔒 Simpan bahan sesuai kategori:  
-  🔴 Asam 🔵 Basa 🟢 Pelarut Organik  
-🔀 Jangan mencampur bahan tanpa prosedur!
-
----
-
-## 🚨 *Tanggap Darurat*
-
-### 💧 Tumpahan Bahan Kimia
-- Gunakan *Spill Kit* 🧯
-- Tutup dan beri tanda peringatan 🚧
-- Segera laporkan ke dosen atau teknisi 📢
-
-### 🔥 Luka Bakar Kimia
-- Bilas air mengalir 🚿 selama 15 menit
-- Lepas pakaian yang terkena bahan 👕
-- Segera cari pertolongan medis 🚑
-
----
-
-## ⚠ *Pencegahan Umum*
-
-- 🧍‍♂ *Jangan bekerja sendirian* di lab
-- 🩻 *Periksa alat sebelum digunakan*
-- 🚫 Hindari baju longgar, sandal, dan aksesori
-- 🌬 Pastikan ventilasi lab berfungsi baik
-
----
-
-## 🧪 *Pengelolaan Limbah Laboratorium*
-
-♻ *Pisahkan limbah berdasarkan jenis*:
-- 🧴 Organik
-- 🧂 Anorganik
-- ☣ B3 (Bahan Berbahaya & Beracun)
-
-🚫 *Jangan buang limbah ke wastafel* sembarangan  
-🗑 Gunakan wadah limbah bertanda khusus
-
----
-
-## ✅ *Penutup*
-
-🏁 Keselamatan kerja adalah tanggung jawab bersama.  
-Dengan disiplin dan kesadaran, kita bisa menciptakan laboratorium yang:
-
-🎯 Aman 🧘 Nyaman 🌱 Ramah Lingkungan
-
-> ✨ *"Selalu waspada, tetap selamat!"* ✨
-
----
-""")
-
-# ==================== Halaman Alat Dasar Lab ====================
-
-elif menu == "🧰 Alat Dasar Lab":
-    st.title("🧰 Peralatan Dasar Laboratorium Kimia")
-
-    st.markdown("""
-    ## 📌 Cara Penggunaan Alat
-    Berikut adalah cara penggunaan beberapa alat gelas dasar:
+    st.title("🛡 Keselamatan dan Kesehatan Kerja (K3)")
+    st.write("""
+    Informasi tentang keselamatan laboratorium dan alat pelindung diri (APD).
     """)
-
-    with st.expander("🔍 Pipet Volume"):
-        st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Volumetric_pipette.png/250px-Volumetric_pipette.png", width=200)
-        st.markdown("""
-        - Gunakan pipet pengisap (jangan pakai mulut).
-        - Ambil larutan hingga tepat di garis kalibrasi.
-        - Hindari gelembung.
-        """)
-
-    with st.expander("🔍 Buret"):
-        st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Burette_50ml.jpg/200px-Burette_50ml.jpg", width=150)
-        st.markdown("""
-        - Pastikan tidak ada gelembung udara di ujung buret.
-        - Bacaan dilakukan sejajar dengan meniskus.
-        - Tutup keran saat tidak digunakan.
-        """)
-
-    with st.expander("🔍 Labu Ukur"):
-        st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Volumetric_flask_100ml.jpg/200px-Volumetric_flask_100ml.jpg", width=150)
-        st.markdown("""
-        - Gunakan untuk pembuatan larutan dengan volume tepat.
-        - Tambahkan air hingga mendekati garis ukur, lalu pakai pipet tetes.
-        """)
-
-    st.markdown("---")
-    st.subheader("🧪 Simulasi Pengukuran Volume")
-
-    pipet = st.number_input("📏 Volume dari Pipet Volume (mL)", min_value=0.0, max_value=25.0, step=0.1, value=10.0)
-    buret_start = st.number_input("💧 Volume Awal Buret (mL)", min_value=0.0, max_value=50.0, step=0.1, value=0.0)
-    buret_end = st.number_input("💧 Volume Akhir Buret (mL)", min_value=0.0, max_value=50.0, step=0.1, value=23.5)
-    labu_ukur = st.selectbox("⚗ Labu Ukur yang Digunakan", ["Tidak digunakan", "25 mL", "50 mL", "100 mL", "250 mL", "500 mL"])
-
-    # Validasi volume buret
-    if buret_end >= buret_start:
-        volume_buret = buret_end - buret_start
-        error_buret = round(random.uniform(-0.05, 0.05), 2)
-    else:
-        st.warning("⚠️ Volume akhir tidak boleh lebih kecil dari volume awal.")
-        volume_buret = 0.0
-        error_buret = 0.0
-
-    # Volume labu ukur
-    volume_labu = float(labu_ukur.split()[0]) if labu_ukur != "Tidak digunakan" else 0.0
-
-    # Error simulasi alat
-    error_pipet = round(random.uniform(-0.05, 0.05), 2)
-    error_labu = round(random.uniform(-0.1, 0.1), 2)
-
-    total_volume = pipet + volume_buret + volume_labu
-    total_error = error_pipet + error_buret + error_labu
-
-    # Rincian volume
-    with st.expander("📊 Rincian Volume"):
-        st.write(f"Pipet Volume: {pipet:.2f} mL")
-        st.write(f"Buret: {volume_buret:.2f} mL")
-        st.write(f"Labu Ukur: {volume_labu:.2f} mL")
-
-    st.success(f"📦 **Total Volume Cairan (tanpa error):** {total_volume:.2f} mL")
-    st.info(f"⚠️ **Dengan toleransi pengukuran: ±{abs(total_error):.2f} mL**")
-
-    # Konfigurasi halaman
-    st.set_page_config(page_title="Kuis Peralatan Gelas", layout="centered")
-    
-    # Garis pemisah dan judul
-    st.markdown("---")
-    st.subheader("🧠 Kuis Cepat: Peralatan Gelas")
-    
-    # Daftar soal
-    soal_list = [
-        {
-            "question": "Apa nama alat gelas ini yang digunakan untuk mengukur volume dengan akurasi tinggi?",
-            "options": ["Gelas ukur", "Buret", "Erlenmeyer", "Pipet tetes"],
-            "answer": "Buret"
-        },
-        {
-            "question": "Alat gelas berbentuk kerucut yang biasa digunakan untuk mencampur larutan adalah?",
-            "options": ["Tabung reaksi", "Erlenmeyer", "Buret", "Pipet ukur"],
-            "answer": "Erlenmeyer"
-        },
-        {
-            "question": "Gelas ukur digunakan untuk...",
-            "options": ["Reaksi kimia", "Mengaduk larutan", "Mengukur volume larutan", "Memisahkan zat padat"],
-            "answer": "Mengukur volume larutan"
-        },
-        {
-            "question": "Pipet ukur digunakan untuk...",
-            "options": ["Memindahkan larutan dalam jumlah tetap", "Mengaduk larutan", "Memanaskan cairan", "Mengukur pH"],
-            "answer": "Memindahkan larutan dalam jumlah tetap"
-        },
-        {
-            "question": "Alat yang digunakan untuk mereaksikan larutan dalam jumlah kecil adalah...",
-            "options": ["Erlenmeyer", "Buret", "Tabung reaksi", "Gelas ukur"],
-            "answer": "Tabung reaksi"
-        },
-    ]
-    
-    # Pilih 3 soal secara acak
-    soal_terpilih = random.sample(soal_list, 3)
-    
-    # Form kuis
-    with st.form("kuis_alat"):
-        jawaban_user = []
-        for i, soal in enumerate(soal_terpilih):
-            jawaban = st.radio(
-                f"{i+1}. {soal['question']}",
-                soal['options'],
-                key=f"soal_{i}"
-            )
-            jawaban_user.append(jawaban)
-    
-        submit = st.form_submit_button("💡 Cek Jawaban")
-    
-    # Evaluasi hasil
-    if submit:
-        benar = 0
-        for i, soal in enumerate(soal_terpilih):
-            if jawaban_user[i] == soal["answer"]:
-                benar += 1
-    
-        st.success(f"✅ Jawaban benar: {benar} dari {len(soal_terpilih)}")
-        if benar < len(soal_terpilih):
-            st.warning("Coba pelajari kembali bagian di atas ya!")
-        else:
-            st.balloons()
-
-        
