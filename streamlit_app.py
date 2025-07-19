@@ -14,4 +14,4 @@ st.markdown(
     Silakan pilih menu di sebelah kiri untuk mulai menggunakan aplikasi.
     """
 )
-streamlit run streamlit_app.py
+
