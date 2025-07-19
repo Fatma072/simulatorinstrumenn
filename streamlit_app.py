@@ -36,8 +36,7 @@ elif menu == "🔬 Spektrofotometer":
     st.subheader("1. Simulasi Spektrum UV-Vis (λ Maksimal)")
     contoh_data = "200,0.01\n250,0.18\n300,0.45\n350,0.60\n400,0.40\n450,0.25"
     input_uvvis = st.text_area("Masukkan data panjang gelombang dan absorbansi:", contoh_data, height=150)
-    uploaded_file = st.file_uploader("Atau unggah file CSV (2 kolom)", type=["csv"])
-
+    
     df_uv = None
     if uploaded_file is not None:
         try:
