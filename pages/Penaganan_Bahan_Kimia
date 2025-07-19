@@ -5,6 +5,9 @@ import matplotlib.pyplot as plt
 import random
 from sklearn.linear_model import LinearRegression
 
+st.set_page_config(page_title="Penanganan Bahan Kimia", layout="wide")
+st.title("🧴 Penanganan Bahan Kimia")
+
 elif menu == "🧴 Penanganan Bahan Kimia":
     st.title("🧴 Penanganan Bahan Kimia")
 
