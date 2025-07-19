@@ -67,7 +67,7 @@ def halaman_beranda():
     st.info("💡 *Tips:* Gunakan menu sebelah kiri untuk navigasi antar modul aplikasi.")
 
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     halaman_beranda()
 
 # Konfigurasi halaman
