@@ -122,7 +122,7 @@ else:
 
 elif menu == "🧴 Penanganan Bahan Kimia":
     st.title("🧴 Penanganan Bahan Kimia")
-    st.write("Pelajari cara menangani bahan kimia dengan aman di laboratorium.")
+    st.write("Pelajari cara menangani bahan kimia dnegan aman di laboratorium.")
 
     bahan = st.selectbox("Pilih bahan kimia:", [
         "Asam Sulfat (H₂SO₄)",
