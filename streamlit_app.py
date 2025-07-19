@@ -87,7 +87,7 @@ if menu == "🏠 Beranda":
  st.markdown("---")
 
 # ==================== Halaman Spektrofotometer ====================
-elif menu == "🔬Spektrofotometer":
+elif menu == "🔬 Spektrofotometer":
     st.title("🔬 Simulasi Spektrofotometer UV-Vis")
 
     st.subheader("🔬 1. Simulasi Spektrum UV-Vis (λ Maksimal)")
