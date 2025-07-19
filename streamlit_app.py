@@ -81,6 +81,9 @@ menu = st.sidebar.selectbox("Pilih Menu", [
 
 # ==================== Halaman Beranda ====================
 if menu == "🏠 Beranda":
+    # kode untuk halaman beranda di sini
+    st.title("🏠 Beranda")
+    st.write("Ini adalah halaman beranda")
 
 # ==================== Halaman Spektrofotometer ====================
 elif menu == "🔬 Spektrofotometer":
