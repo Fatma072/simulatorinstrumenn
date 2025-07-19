@@ -132,7 +132,14 @@ elif menu == "🧴 Penanganan Bahan Kimia":
         "Natrium Hidroksida (NaOH)",
         "Aseton (CH₃COCH₃)",
         "Hidrogen Peroksida (H₂O₂)"
+        "Klorin (Cl₂)",
+        "Metanol (CH₃OH)",
+        "Amonia (NH₃)",
+        "Benzena (C₆H₆)",
+        "Formaldehida (CH₂O)",
+        "Klorofom (CHCl₃)"
     ])
+   
 
     if bahan == "Asam Sulfat (H₂SO₄)":
         st.header("Asam Sulfat (H₂SO₄)")
@@ -252,6 +259,229 @@ elif menu == "🧴 Penanganan Bahan Kimia":
         **🛡️Pencegahan:**  
         - Gunakan pelindung mata dan sarung tangan neoprene  
         - Hindari penggunaan logam atau benda berkarat saat menanganinya
+        """)
+
+
+    elif bahan == "Klorin (Cl₂)":
+        st.header("🧪 Klorin (Cl₂)")
+        st.markdown("### 🧪 Karakteristik bahan kimia")
+        st.info("""
+        - Gas kuning kehijauan dengan bau tajam dan menyengat  
+        - Sangat reaktif, korosif, dan beracun  
+        - Oksidator kuat, berbahaya bagi lingkungan  
+
+        ⚠️ **Simbol Bahaya:**  
+        ☠️ Racun (Toxic)  
+        🧪 Korosif  
+        🌿 Bahaya lingkungan  
+        """)
+        st.markdown("### ⚠️ Risiko yang terjadi")
+        st.error("""
+        - Pernapasan: iritasi berat saluran pernapasan, sesak napas, kerusakan paru-paru  
+        - Kulit dan mata: iritasi, luka bakar  
+        - Paparan tinggi dapat menyebabkan kematian
+        """)
+        st.markdown("### 🚨 Penanganan Darurat")
+        st.warning("""
+        - Evakuasi area dan bawa korban ke udara segar  
+        - Bilas mata atau kulit dengan air mengalir minimal 15 menit  
+        - Gunakan alat pelindung diri lengkap saat menangani kebocoran
+        """)
+        st.markdown("### 📦 Penyimpanan Aman")
+        st.success("""
+        - Simpan dalam tabung gas bertekanan standar  
+        - Jauhkan dari bahan mudah terbakar dan bahan reduktor  
+        - Tempat penyimpanan harus berventilasi baik dan tertutup rapat
+        """)
+        st.markdown("### 🛡️ Pencegahan")
+        st.info("""
+        - Gunakan masker respirator dan pelindung mata saat menangani gas  
+        - Monitor kebocoran gas dengan detektor khusus  
+        - Latih prosedur evakuasi dan tanggap darurat gas beracun
+        """)
+
+    elif bahan == "Metanol (CH₃OH)":
+        st.header("🧪 Metanol (CH₃OH)")
+        st.markdown("### 🧪 Karakteristik bahan kimia")
+        st.info("""
+        - Cairan bening, mudah menguap dan sangat mudah terbakar  
+        - Beracun jika tertelan, terhirup, atau kontak kulit  
+        - Bau alkohol yang khas  
+
+        ⚠️ **Simbol Bahaya:**  
+        ☠️ Beracun (Toxic)  
+        🔥 Mudah terbakar (Flammable)  
+        """)
+        st.markdown("### ⚠️ Risiko yang terjadi")
+        st.error("""
+        - Tertelan: keracunan serius, kerusakan organ dalam, kematian  
+        - Terhirup: iritasi pernapasan, pusing, sakit kepala  
+        - Kontak kulit: iritasi dan kemungkinan penyerapannya ke dalam tubuh
+        """)
+        st.markdown("### 🚨 Penanganan Darurat")
+        st.warning("""
+        - Jika tertelan, segera cari pertolongan medis  
+        - Bilas kulit dan mata jika terkena  
+        - Pastikan ventilasi cukup dan jauhkan dari sumber api
+        """)
+        st.markdown("### 📦 Penyimpanan Aman")
+        st.success("""
+        - Simpan dalam wadah tertutup rapat dan tahan bahan kimia  
+        - Jauhkan dari panas, percikan api, dan sumber nyala api  
+        - Tempat penyimpanan harus berventilasi dan sejuk
+        """)
+        st.markdown("### 🛡️ Pencegahan")
+        st.info("""
+        - Gunakan sarung tangan tahan bahan kimia dan pelindung mata  
+        - Hindari penggunaan di area tertutup tanpa ventilasi baik  
+        - Sediakan alat pemadam api dan prosedur tanggap kebakaran
+        """)
+
+    if bahan == "Amonia (NH₃)":
+        st.header("🧪 Amonia (NH₃)")
+        st.markdown("### 🧪 Karakteristik bahan kimia")
+        st.info("""
+        - Gas tidak berwarna dengan bau tajam menyengat  
+        - Sangat mudah larut dalam air membentuk basa kuat  
+        - Dapat menyebabkan iritasi dan korosif  
+        
+        ⚠️ **Simbol Bahaya:**  
+        ☠️ Racun (Toxic)  
+        🧪 Korosif
+        """)
+        st.markdown("### ⚠️ Risiko yang terjadi")
+        st.error("""
+        - Terhirup: iritasi saluran pernapasan, batuk, sesak napas  
+        - Kontak kulit/mata: iritasi, luka bakar  
+        - Paparan tinggi dapat menyebabkan kerusakan paru-paru
+        """)
+        st.markdown("### 🚨 Penanganan Darurat")
+        st.warning("""
+        - Pindahkan korban ke udara segar  
+        - Bilas kulit/mata dengan air mengalir selama 15 menit  
+        - Gunakan alat pelindung diri lengkap saat menangani kebocoran gas
+        """)
+        st.markdown("### 📦 Penyimpanan Aman")
+        st.success("""
+        - Simpan dalam tabung gas bertekanan dengan ventilasi baik  
+        - Jauhkan dari bahan asam dan sumber panas  
+        - Tempat penyimpanan harus aman dan tertutup rapat
+        """)
+        st.markdown("### 🛡️ Pencegahan")
+        st.info("""
+        - Gunakan masker respirator dan pelindung mata  
+        - Hindari kontak langsung dengan gas  
+        - Monitor konsentrasi gas di area kerja
+        """)
+
+    elif bahan == "Benzena (C₆H₆)":
+        st.header("🧪 Benzena (C₆H₆)")
+        st.markdown("### 🧪 Karakteristik bahan kimia")
+        st.info("""
+        - Cairan bening mudah menguap, bau khas  
+        - Sangat mudah terbakar dan karsinogenik  
+        
+        ⚠️ **Simbol Bahaya:**  
+        ☠️ Beracun (Toxic)  
+        🔥 Mudah terbakar (Flammable)  
+        ☣️ Karsinogen
+        """)
+        st.markdown("### ⚠️ Risiko yang terjadi")
+        st.error("""
+        - Terhirup: kerusakan sistem saraf, pusing, mual  
+        - Tertelan/kontak kulit: iritasi, toksisitas  
+        - Paparan jangka panjang: risiko kanker darah (leukemia)
+        """)
+        st.markdown("### 🚨 Penanganan Darurat")
+        st.warning("""
+        - Evakuasi ke udara segar  
+        - Hindari kontak kulit dan mata  
+        - Gunakan alat pelindung diri dan ventilasi memadai
+        """)
+        st.markdown("### 📦 Penyimpanan Aman")
+        st.success("""
+        - Simpan di wadah tertutup rapat di tempat sejuk dan berventilasi  
+        - Jauhkan dari sumber api dan bahan pengoksidasi  
+        - Gunakan wadah tahan bahan kimia dan ledakan
+        """)
+        st.markdown("### 🛡️ Pencegahan")
+        st.info("""
+        - Gunakan sarung tangan dan pelindung mata  
+        - Kerja di ruang ventilasi baik atau fume hood  
+        - Hindari paparan jangka panjang
+        """)
+
+    elif bahan == "Formaldehida (CH₂O)":
+        st.header("🧪 Formaldehida (CH₂O)")
+        st.markdown("### 🧪 Karakteristik bahan kimia")
+        st.info("""
+        - Gas atau larutan berbau tajam dan menyengat  
+        - Karsinogen dan iritan kuat  
+        
+        ⚠️ **Simbol Bahaya:**  
+        ☠️ Beracun (Toxic)  
+        ☣️ Karsinogen  
+        🧪 Korosif
+        """)
+        st.markdown("### ⚠️ Risiko yang terjadi")
+        st.error("""
+        - Terhirup: iritasi saluran pernapasan, batuk, sesak  
+        - Kontak kulit/mata: iritasi, alergi  
+        - Paparan jangka panjang: risiko kanker hidung dan tenggorokan
+        """)
+        st.markdown("### 🚨 Penanganan Darurat")
+        st.warning("""
+        - Pindahkan korban ke udara segar  
+        - Bilas mata dan kulit dengan air mengalir  
+        - Gunakan alat pelindung lengkap saat menangani bahan ini
+        """)
+        st.markdown("### 📦 Penyimpanan Aman")
+        st.success("""
+        - Simpan di tempat tertutup dan berventilasi baik  
+        - Jauhkan dari sumber panas dan bahan pengoksidasi  
+        - Gunakan wadah tahan bahan kimia
+        """)
+        st.markdown("### 🛡️ Pencegahan")
+        st.info("""
+        - Gunakan respirator, sarung tangan, dan pelindung mata  
+        - Kerja di fume hood atau area ventilasi baik  
+        - Hindari paparan berulang dan jangka panjang
+        """)
+
+    elif bahan == "Klorofom (CHCl₃)":
+        st.header("🧪 Klorofom (CHCl₃)")
+        st.markdown("### 🧪 Karakteristik bahan kimia")
+        st.info("""
+        - Cairan bening, bau manis  
+        - Sedatif, toksik, dan kemungkinan karsinogen  
+        
+        ⚠️ **Simbol Bahaya:**  
+        ☠️ Beracun (Toxic)  
+        ⚠️ Bahaya kesehatan (Health hazard)  
+        """)
+        st.markdown("### ⚠️ Risiko yang terjadi")
+        st.error("""
+        - Terhirup: depresi sistem saraf pusat, mual, pusing  
+        - Kontak kulit: iritasi dan toksisitas  
+        - Paparan jangka panjang: kemungkinan kanker hati dan ginjal
+        """)
+        st.markdown("### 🚨 Penanganan Darurat")
+        st.warning("""
+        - Pindahkan ke udara segar  
+        - Bilas kulit dan mata dengan air  
+        - Gunakan alat pelindung diri saat bekerja dengan bahan ini
+        """)
+        st.markdown("### 📦 Penyimpanan Aman")
+        st.success("""
+        - Simpan di tempat gelap, dingin, dan berventilasi  
+        - Jauhkan dari sumber api dan oksidator  
+        - Gunakan wadah tertutup rapat
+        """)
+        st.markdown("### 🛡️ Pencegahan")
+        st.info("""
+        - Gunakan sarung tangan tahan bahan kimia dan pelindung mata  
+        - Kerja di fume hood  
+        - Hindari paparan berulang dan penggunaan jangka panjang
         """)
 
 
