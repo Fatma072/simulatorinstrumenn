@@ -640,9 +640,7 @@ elif menu == "🧰 Alat Dasar Lab":
     st.subheader("🧠 Kuis Cepat: Peralatan Gelas")
 
     with st.form("kuis_alat"):
-       import streamlit as st
-import random
-
+      
 # Data soal: list of dict (soal, pilihan, jawaban benar)
 soal_list = [
     {
