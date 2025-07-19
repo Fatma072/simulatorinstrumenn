@@ -44,11 +44,6 @@ daily_quote = random.choice(quotes)
 
 # Halaman Beranda
 def beranda():
-    st.title("💡 Aplikasi Simulator Instrumen Kimia")
-    st.header("Selamat Datang 👋")
-    st.write("Aplikasi ini membantu Anda memahami berbagai simulasi instrumen laboratorium kimia, serta menyediakan panduan penanganan bahan kimia dan keselamatan kerja (K3).")
-
-    st.markdown("---")
 
     # Quote atau tips harian
     st.info(f"📌 **Tips Laboratorium Hari Ini:** {daily_quote}")
@@ -56,9 +51,7 @@ def beranda():
     # Statistik sederhana (contoh statis, bisa dihubungkan dengan data nyata)
     col1, col2, col3 = st.columns(3)
     col1.metric("📋 Menu Tersedia", 5)
-    col2.metric("👥 Pengguna Aktif", 120)
-    col3.metric("⏳ Rata-rata Waktu Sesi", "5 menit")
-
+    
     st.markdown("---")
 
     # Tombol navigasi yang menarik ke halaman lain
