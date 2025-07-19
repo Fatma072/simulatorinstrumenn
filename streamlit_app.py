@@ -30,11 +30,10 @@ if menu == "🏠 Beranda":
         """
     )
 
-elif menu == "🔬 Spektrofotometer":
-    st.title("🔬 Simulator Spektrofotometer")
-    st.write("""
-    Simulasi spektrofotometer untuk melihat hubungan antara konsentrasi dan absorbansi.
-    """)
+if menu == "🔬 Spektrofotometer":
+    st.subheader("🔬 1. Simulasi Spektrum UV-Vis (λ Maksimal)")
+    st.write("Simulasi ini menampilkan grafik absorbansi terhadap panjang gelombang.")
+
     if simulasi == "UV-Vis":
     st.subheader("🔬 1. Simulasi Spektrum UV-Vis (λ Maksimal)")
     st.markdown("Masukkan data panjang gelombang dan absorbansi:")
