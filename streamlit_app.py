@@ -640,37 +640,63 @@ elif menu == "🧰 Alat Dasar Lab":
     st.subheader("🧠 Kuis Cepat: Peralatan Gelas")
 
     with st.form("kuis_alat"):
-        q1 = st.radio("1. Alat terbaik untuk mengambil volume larutan **secara tepat** adalah:", 
-                      ["Gelas ukur", "Erlenmeyer", "Pipet Volume", "Beaker"])
-        q2 = st.radio("2. Kapan kita harus membaca meniskus cairan?", 
-                      ["Dari atas", "Dari samping sejajar", "Dari bawah", "Sambil menggoyangkan alat"])
-        q3 = st.radio("3. Alat mana yang digunakan untuk membuat larutan dengan volume tepat?", 
-                      ["Buret", "Labu Ukur", "Pipet", "Beaker"])
-        submit = st.form_submit_button("💡 Cek Jawaban")
+       import streamlit as st
+import random
 
-    if submit:
-        benar = 0
-        feedback = []
+# Data soal: list of dict (soal, pilihan, jawaban benar)
+soal_list = [
+    {
+        "question": "Alat terbaik untuk mengambil volume larutan secara tepat adalah:",
+        "options": ["Gelas ukur", "Erlenmeyer", "Pipet Volume", "Beaker"],
+        "answer": "Pipet Volume"
+    },
+    {
+        "question": "Kapan kita harus membaca meniskus cairan?",
+        "options": ["Dari atas", "Dari samping sejajar", "Dari bawah", "Sambil menggoyangkan alat"],
+        "answer": "Dari samping sejajar"
+    },
+    {
+        "question": "Alat mana yang digunakan untuk membuat larutan dengan volume tepat?",
+        "options": ["Buret", "Labu Ukur", "Pipet", "Beaker"],
+        "answer": "Labu Ukur"
+    },
+    {
+        "question": "Fungsi utama buret dalam titrasi adalah:",
+        "options": ["Mengukur massa", "Mengukur volume dengan presisi", "Membuat larutan", "Menampung hasil reaksi"],
+        "answer": "Mengukur volume dengan presisi"
+    },
+    {
+        "question": "Bagian yang harus dicek saat menggunakan pipet adalah:",
+        "options": ["Kebersihan ujung", "Kadar larutan", "Warna larutan", "Berat pipet"],
+        "answer": "Kebersihan ujung"
+    }
+]
 
-        if q1 == "Pipet Volume":
+# Pilih 3 soal secara acak tiap run
+soal_terpilih = random.sample(soal_list, 3)
+
+st.subheader("🧠 Kuis Cepat: Peralatan Gelas")
+
+with st.form("kuis_alat"):
+    jawaban_user = []
+    for i, soal in enumerate(soal_terpilih):
+        jawaban = st.radio(
+            f"{i+1}. {soal['question']}",
+            soal['options'],
+            key=f"soal_{i}"
+        )
+        jawaban_user.append(jawaban)
+
+    submit = st.form_submit_button("💡 Cek Jawaban")
+
+if submit:
+    benar = 0
+    for i, soal in enumerate(soal_terpilih):
+        if jawaban_user[i] == soal["answer"]:
             benar += 1
-        else:
-            feedback.append("❌ Soal 1: Jawaban benar adalah **Pipet Volume**.")
 
-        if q2 == "Dari samping sejajar":
-            benar += 1
-        else:
-            feedback.append("❌ Soal 2: Jawaban benar adalah **Dari samping sejajar**.")
-
-        if q3 == "Labu Ukur":
-            benar += 1
-        else:
-            feedback.append("❌ Soal 3: Jawaban benar adalah **Labu Ukur**.")
-
-        st.success(f"✅ Jawaban benar: {benar} dari 3")
-        if benar < 3:
-            for f in feedback:
-                st.markdown(f)
-            st.warning("Coba pelajari kembali bagian di atas ya!")
-        else:
-            st.balloons()
+    st.success(f"✅ Jawaban benar: {benar} dari {len(soal_terpilih)}")
+    if benar < len(soal_terpilih):
+        st.warning("Coba pelajari kembali bagian di atas ya!")
+    else:
+        st.balloons()
