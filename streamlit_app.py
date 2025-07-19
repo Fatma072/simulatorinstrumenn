@@ -487,7 +487,42 @@ elif menu == "🧴 Penanganan Bahan Kimia":
 
 # ==================== Halaman K3 ====================
 elif menu == "🛡 Keselamatan Kerja (K3)":
-    st.title("🛡 Keselamatan dan Kesehatan Kerja (K3)")
-    st.write("""
-    Informasi tentang keselamatan laboratorium dan alat pelindung diri (APD).
-    """)
+st.title("🧪🔬 Keselamatan Kerja di Laboratorium Kimia 🧤🦺")
+
+st.markdown("""
+---
+
+## 📚 *Pendahuluan*
+Keselamatan kerja 🔒 di laboratorium adalah hal yang sangat penting untuk:
+- 🛑 Menghindari kecelakaan
+- ⚠ Mengurangi risiko paparan bahan berbahaya
+- 👨‍🔬 Menciptakan lingkungan kerja yang aman dan tertib
+
+---
+
+## 🛡 *Prinsip Umum Keselamatan*
+
+🔸 *Kenali bahan kimia* sebelum digunakan (baca label & MSDS)  
+🔸 *Gunakan APD (Alat Pelindung Diri):*  
+  🧥 Jas lab 👓 Kacamata 🧤 Sarung tangan  
+🔸 *Dilarang keras:* 🍔 Makan, 🍵 Minum, dan 💄 Make-up di lab  
+🔸 *Cuci tangan* 🧼 sebelum dan sesudah praktikum  
+🔸 *Jaga meja tetap rapi dan bersih* 🧹
+
+---
+
+## 🔥 *Penanganan Bahan Kimia Berbahaya*
+
+☠ Hindari menghirup langsung bahan beracun  
+🌬 Gunakan *lemari asam* saat menangani bahan volatil  
+🔒 Simpan bahan sesuai kategori:  
+  🔴 Asam 🔵 Basa 🟢 Pelarut Organik  
+🔀 Jangan mencampur bahan tanpa prosedur!
+
+---
+
+## 🚨 *Tanggap Darurat*
+
+### 💧 Tumpahan Bahan Kimia
+- Gunakan *Spill Kit* 🧯
+- Tutup dan beri tanda peringata
