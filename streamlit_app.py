@@ -7,6 +7,8 @@ from sklearn.linear_model import LinearRegression
 
 # Konfigurasi halaman
 st.set_page_config(page_title="Simulator Kimia", layout="wide")
+ st.markdown("---")
+    st.info("💡 **Tips:** Gunakan menu sebelah kiri untuk navigasi antar modul aplikasi.")
 
 def halaman_beranda():
     st.markdown(
@@ -64,9 +66,6 @@ def halaman_beranda():
         st.write("Informasi dan prosedur keselamatan kerja laboratorium.")
         st.markdown("### 🧰 Alat Dasar Lab")
         st.write("Panduan alat gelas dasar laboratorium dan simulasi pengukuran volume.")
-
-    st.markdown("---")
-    st.info("💡 **Tips:** Gunakan menu sebelah kiri untuk navigasi antar modul aplikasi.")
 
 # Untuk testing lokal kamu bisa panggil fungsi ini
 if __name__ == "__main__":
