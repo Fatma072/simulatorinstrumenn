@@ -13,7 +13,6 @@ menu = st.sidebar.selectbox(
     (
         "🏠 Beranda",
         "🔬 Spektrofotometer"
-        "🧪 Kromatografi",
         "🧴 Penanganan Bahan Kimia",
         "🛡️ Keselamatan Kerja (K3)"
     )
@@ -120,13 +119,6 @@ else:
             st.error("Slope tidak boleh nol.")
 
 # Lanjutkan dengan menu lainnya...
-
-
-elif menu == "🧪 Kromatografi":
-    st.title("🧪 Simulator Kromatografi")
-    st.write("""
-    Simulasi kromatografi untuk memahami pemisahan komponen dalam campuran.
-    """)
 
 elif menu == "🧴 Penanganan Bahan Kimia":
     st.title("🧴 Penanganan Bahan Kimia")
