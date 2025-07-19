@@ -116,9 +116,7 @@ else:
             konsentrasi = (absorbansi_sampel - intercept_input) / slope_input
             st.success(f"Perkiraan konsentrasi sampel: **{konsentrasi:.2f} ppm**")
         except ZeroDivisionError:
-            st.error("Slope tidak boleh nol.")
-
-# Lanjutkan dengan menu lainnya...
+            st.error("Slope tidak boleh nol."
 
 elif menu == "🧴 Penanganan Bahan Kimia":
     st.title("🧴 Penanganan Bahan Kimia")
