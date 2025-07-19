@@ -78,6 +78,46 @@ menu = st.sidebar.selectbox("Pilih Menu", [
     "🛡 Keselamatan Kerja (K3)",
     "🧰 Alat Dasar Lab"
 ])
+import streamlit as st
+
+def halaman_beranda():
+    st.title("🏠 Beranda")
+    st.write("Ini adalah halaman beranda")
+
+def halaman_spektrofotometer():
+    st.title("🧪 Spektrofotometer")
+    st.write("Simulasi spektrofotometer di sini.")
+
+def halaman_penanganan_bahan():
+    st.title("🧴 Penanganan Bahan Kimia")
+    st.write("Daftar bahan kimia dan penanganannya.")
+
+def halaman_k3():
+    st.title("🛡 Keselamatan Kerja (K3)")
+    st.write("Informasi tentang keselamatan kerja.")
+
+def halaman_alat_lab():
+    st.title("🧰 Alat Dasar Lab")
+    st.write("Simulasi pengukuran volume dan alat dasar.")
+
+menu = st.sidebar.selectbox("Pilih Menu", [
+    "🏠 Beranda",
+    "🧪 Spektrofotometer",
+    "🧴 Penanganan Bahan Kimia",
+    "🛡 Keselamatan Kerja (K3)",
+    "🧰 Alat Dasar Lab"
+])
+
+if menu == "🏠 Beranda":
+    halaman_beranda()
+elif menu == "🧪 Spektrofotometer":
+    halaman_spektrofotometer()
+elif menu == "🧴 Penanganan Bahan Kimia":
+    halaman_penanganan_bahan()
+elif menu == "🛡 Keselamatan Kerja (K3)":
+    halaman_k3()
+elif menu == "🧰 Alat Dasar Lab":
+    halaman_alat_lab()
 
 # ==================== Halaman Beranda ====================
 if menu == "🏠 Beranda":
