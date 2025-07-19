@@ -19,6 +19,27 @@ menu = st.sidebar.selectbox(
         "🧰 Alat Dasar Lab"
     )
 )
+    st.markdown("---")
+    st.subheader("📚 Menu yang Tersedia")
+
+    st.markdown("""
+    Berikut adalah fitur-fitur yang tersedia di aplikasi ini:
+
+    - 🏠 **Beranda**  
+      Halaman utama aplikasi dengan pengantar dan ringkasan fitur.
+
+    - 🛡️ **Keselamatan Kerja (K3)**  
+      Informasi dan prosedur keselamatan kerja laboratorium.
+
+    - 🧰 **Alat Dasar Lab**  
+      Panduan alat gelas dasar laboratorium dan simulasi pengukuran volume.
+
+    - 🧴 **Penanganan Bahan Kimia**  
+      Tips dan aturan penanganan bahan kimia yang aman.
+
+    - 🔬 **Spektrofotometer**  
+      Simulasi dan panduan penggunaan alat spektrofotometer UV-Vis.
+    """)
 
 # ==================== Halaman Beranda ====================
 if menu == "🏠 Beranda":
