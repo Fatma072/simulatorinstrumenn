@@ -20,8 +20,7 @@ menu = st.sidebar.selectbox(
     )
 )
     
-    st.subheader("📚 Menu yang Tersedia")
-
+ 
     st.markdown("""
     Berikut adalah fitur-fitur yang tersedia di aplikasi ini:
 
