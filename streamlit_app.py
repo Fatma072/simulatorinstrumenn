@@ -118,8 +118,8 @@ else:
         except ZeroDivisionError:
             st.error("Slope tidak boleh nol.")
 
-elif menu == "🧴 Penanganan Bahan Kimia":
-    st.title("🧴 Penanganan Bahan Kimia")
+elif menu == " Penanganan Bahan Kimia":
+    st.title("Penanganan Bahan Kimia")
     st.write("Pelajari cara menangani bahan kimia dnegan aman di laboratorium.")
 
     bahan = st.selectbox("Pilih bahan kimia:", [
