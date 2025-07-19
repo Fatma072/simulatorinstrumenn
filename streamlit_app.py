@@ -84,7 +84,7 @@ menu = st.sidebar.selectbox(
 
 # ==================== Halaman Beranda ====================
 if menu == "🏠 Beranda":
- st.markdown("---")
+ st.markdown("## 📋 Menu Utama")
 
 # ==================== Halaman Spektrofotometer ====================
 elif menu == "🔬 Spektrofotometer":
@@ -129,6 +129,8 @@ elif menu == "🔬 Spektrofotometer":
         st.pyplot(fig)
     else:
         st.info("Silakan masukkan data panjang gelombang dan absorbansi di atas untuk melihat grafik.")
+
+     st.markdown("## 📋 Menu Utama")
 
     # ==================== Simulasi Kurva Kalibrasi ====================
     st.subheader("2. Simulasi Kurva Kalibrasi")
