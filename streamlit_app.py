@@ -692,4 +692,4 @@ elif menu == "🧰 Alat Dasar Lab":
         if benar < len(soal_terpilih):
             st.warning("Coba pelajari kembali bagian di atas ya!")
         else:
-            st.balloons()
+        st.balloons()
