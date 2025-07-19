@@ -120,8 +120,8 @@ else:
 
 # Lanjutkan dengan menu lainnya...
 
-    elif menu == "🧴 Penanganan Bahan Kimia":
-    st.title("🧴 Penanganan Bahan Kimia")
+elif menu == "🧴 Penanganan Bahan Kimia":
+    st.title("🧴 Penanganan Bahan Kimia")  # ← Tambahkan indentasi (4 spasi)
     st.write("Pelajari cara menangani bahan kimia dengan aman di laboratorium.")
 
     # Daftar bahan kimia umum
