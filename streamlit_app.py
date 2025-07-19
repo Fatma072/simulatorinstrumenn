@@ -487,82 +487,63 @@ elif menu == "🧴 Penanganan Bahan Kimia":
 
 # ==================== Halaman K3 ====================
 elif menu == "🛡 Keselamatan Kerja (K3)":
-st.title("🧪🔬 Keselamatan Kerja di Laboratorium Kimia 🧤🦺")
-st.markdown("""
----
+    st.title("🧪🔬 Keselamatan Kerja di Laboratorium Kimia 🧤🦺")
 
-## 📚 *Pendahuluan*
-Keselamatan kerja 🔒 di laboratorium adalah hal yang sangat penting untuk:
-- 🛑 Menghindari kecelakaan
-- ⚠ Mengurangi risiko paparan bahan berbahaya
-- 👨‍🔬 Menciptakan lingkungan kerja yang aman dan tertib
+    st.markdown("""
+    ---
 
----
+    ## 📚 *Pendahuluan*
+    Keselamatan kerja 🔒 di laboratorium adalah hal yang sangat penting untuk:
+    - 🛑 Menghindari kecelakaan
+    - ⚠ Mengurangi risiko paparan bahan berbahaya
+    - 👨‍🔬 Menciptakan lingkungan kerja yang aman dan tertib
 
-## 🛡 *Prinsip Umum Keselamatan*
+    ---
 
-🔸 *Kenali bahan kimia* sebelum digunakan (baca label & MSDS)  
-🔸 *Gunakan APD (Alat Pelindung Diri):*  
-  🧥 Jas lab 👓 Kacamata 🧤 Sarung tangan  
-🔸 *Dilarang keras:* 🍔 Makan, 🍵 Minum, dan 💄 Make-up di lab  
-🔸 *Cuci tangan* 🧼 sebelum dan sesudah praktikum  
-🔸 *Jaga meja tetap rapi dan bersih* 🧹
+    ## 🛡 *Prinsip Umum Keselamatan*
 
----
+    🔸 *Kenali bahan kimia* sebelum digunakan (baca label & MSDS)  
+    🔸 *Gunakan APD (Alat Pelindung Diri):*  
+      🧥 Jas lab 👓 Kacamata 🧤 Sarung tangan  
+    🔸 *Dilarang keras:* 🍔 Makan, 🍵 Minum, dan 💄 Make-up di lab  
+    🔸 *Cuci tangan* 🧼 sebelum dan sesudah praktikum  
+    🔸 *Jaga meja tetap rapi dan bersih* 🧹
 
-## 🔥 *Penanganan Bahan Kimia Berbahaya*
+    ---
 
-☠ Hindari menghirup langsung bahan beracun  
-🌬 Gunakan *lemari asam* saat menangani bahan volatil  
-🔒 Simpan bahan sesuai kategori:  
-  🔴 Asam 🔵 Basa 🟢 Pelarut Organik  
-🔀 Jangan mencampur bahan tanpa prosedur!
+    ## 🔥 *Penanganan Bahan Kimia Berbahaya*
 
----
+    ☠ Hindari menghirup langsung bahan beracun  
+    🌬 Gunakan *lemari asam* saat menangani bahan volatil  
+    🔒 Simpan bahan sesuai kategori:  
+      🔴 Asam 🔵 Basa 🟢 Pelarut Organik  
+    🔀 Jangan mencampur bahan tanpa prosedur!
 
-## 🚨 *Tanggap Darurat*
+    ---
 
-### 💧 Tumpahan Bahan Kimia
-- Gunakan *Spill Kit* 🧯
-- Tutup dan beri tanda peringatan 🚧
-- Segera laporkan ke dosen atau teknisi 📢
+    ## 🚨 *Tanggap Darurat*
 
-### 🔥 Luka Bakar Kimia
-- Bilas air mengalir 🚿 selama 15 menit
-- Lepas pakaian yang terkena bahan 👕
-- Segera cari pertolongan medis 🚑
+    ### 💧 Tumpahan Bahan Kimia
+    - Gunakan *Spill Kit* 🧯
+    - Tutup dan beri tanda peringatan 🚧
+    - Segera laporkan ke dosen atau teknisi 📢
 
----
+    ### 🔥 Luka Bakar Kimia
+    - Bilas air mengalir 🚿 selama 15 menit
+    - Lepas pakaian yang terkena bahan 👕
+    - Segera cari pertolongan medis 🚑
 
-## ⚠ *Pencegahan Umum*
+    ---
 
-- 🧍‍♂ *Jangan bekerja sendirian* di lab
-- 🩻 *Periksa alat sebelum digunakan*
-- 🚫 Hindari baju longgar, sandal, dan aksesori
-- 🌬 Pastikan ventilasi lab berfungsi baik
+    ## ⚠ *Pencegahan Umum*
 
----
+    - 🧍‍♂ *Jangan bekerja sendirian* di lab
+    - 🩻 *Periksa alat sebelum digunakan*
+    - 🚫 Hindari baju longgar, sandal, dan aksesori
+    - 🌬 Pastikan ventilasi lab berfungsi baik
 
-## 🧪 *Pengelolaan Limbah Laboratorium*
+    ---
 
-♻ *Pisahkan limbah berdasarkan jenis*:
-- 🧴 Organik
-- 🧂 Anorganik
-- ☣ B3 (Bahan Berbahaya & Beracun)
+    ## 🧪 *Pengelolaan Limbah Laboratorium*
 
-🚫 *Jangan buang limbah ke wastafel* sembarangan  
-🗑 Gunakan wadah limbah bertanda khusus
-
----
-
-## ✅ *Penutup*
-
-🏁 Keselamatan kerja adalah tanggung jawab bersama.  
-Dengan disiplin dan kesadaran, kita bisa menciptakan laboratorium yang:
-
-🎯 Aman 🧘 Nyaman 🌱 Ramah Lingkungan
-
-> ✨ *"Selalu waspada, tetap selamat!"* ✨
-
----
-""")
+    ♻ *Pisah*
