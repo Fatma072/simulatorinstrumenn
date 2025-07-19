@@ -8,16 +8,13 @@ from sklearn.linear_model import LinearRegression
 st.set_page_config(page_title="Simulator Kimia", layout="wide")
 
 # Sidebar menu
-menu = st.sidebar.selectbox(
-    "Pilih Halaman",
-    (
-        "🏠 Beranda",
-        "🔬 Spektrofotometer",
-        "🧴 Penanganan Bahan Kimia",
-        "🛡 Keselamatan Kerja (K3)"
-        "🧰 Alat Dasar Lab"
-    )
-)
+menu = st.sidebar.selectbox("Pilih Menu", [
+    "🏠 Beranda",
+    "🧪 Spektrofotometer",
+    "🧴 Penanganan Bahan Kimia",
+    "🛡 Keselamatan Kerja (K3)",
+    "🧰 Alat Dasar Lab"
+])
 
 # ==================== Halaman Beranda ====================
 if menu == "🏠 Beranda":
