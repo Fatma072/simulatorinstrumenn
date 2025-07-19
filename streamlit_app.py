@@ -121,10 +121,7 @@ else:
 # Lanjutkan dengan menu lainnya...
 
 elif menu == "🧴 Penanganan Bahan Kimia":
-    st.title("🧴 Penanganan Bahan Kimia")
-    st.write("""
-    Panduan menyimpan dan menangani bahan kimia dengan aman di laboratorium.
-    """)
+    st.write("Konten bahan kimia")
 
 elif menu == "🛡️ Keselamatan Kerja (K3)":
     st.title("🛡️ Keselamatan dan Kesehatan Kerja (K3)")
