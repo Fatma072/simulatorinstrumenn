@@ -15,6 +15,7 @@ menu = st.sidebar.selectbox(
         "🔬 Spektrofotometer",
         "🧴 Penanganan Bahan Kimia",
         "🛡 Keselamatan Kerja (K3)"
+        "🧰 Alat Dasar Lab"
     )
 )
 
@@ -567,3 +568,89 @@ Dengan disiplin dan kesadaran, kita bisa menciptakan laboratorium yang:
 
 ---
 """)
+
+# ==================== Halaman Alat Dasar Lab ====================
+import random
+
+elif menu == "🧰 Alat Dasar":
+    st.title("🧰 Peralatan Dasar Laboratorium Kimia")
+
+    st.markdown("""
+    ## 📌 Cara Penggunaan Alat
+    Berikut adalah cara penggunaan beberapa alat gelas dasar:
+    """)
+
+    with st.expander("🔍 Pipet Volume"):
+        st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Volumetric_pipette.png/250px-Volumetric_pipette.png", width=200)
+        st.markdown("""
+        - Gunakan pipet pengisap (jangan pakai mulut).
+        - Ambil larutan hingga tepat di garis kalibrasi.
+        - Hindari gelembung.
+        """)
+
+    with st.expander("🔍 Buret"):
+        st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Burette_50ml.jpg/200px-Burette_50ml.jpg", width=150)
+        st.markdown("""
+        - Pastikan tidak ada gelembung udara di ujung buret.
+        - Bacaan dilakukan sejajar dengan meniskus.
+        - Tutup keran saat tidak digunakan.
+        """)
+
+    with st.expander("🔍 Labu Ukur"):
+        st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Volumetric_flask_100ml.jpg/200px-Volumetric_flask_100ml.jpg", width=150)
+        st.markdown("""
+        - Gunakan untuk pembuatan larutan dengan volume tepat.
+        - Tambahkan air hingga mendekati garis ukur, lalu pakai pipet tetes.
+        """)
+
+    st.markdown("---")
+    st.subheader("🧪 Simulasi Pengukuran Volume")
+
+    pipet = st.number_input("📏 Volume dari Pipet Volume (mL)", min_value=0.0, max_value=25.0, step=0.1, value=10.0)
+    buret_start = st.number_input("💧 Volume Awal Buret (mL)", min_value=0.0, max_value=50.0, step=0.1, value=0.0)
+    buret_end = st.number_input("💧 Volume Akhir Buret (mL)", min_value=0.0, max_value=50.0, step=0.1, value=23.5)
+    labu_ukur = st.selectbox("⚗ Labu Ukur yang Digunakan", ["Tidak digunakan", "25 mL", "50 mL", "100 mL", "250 mL", "500 mL"])
+
+    if buret_end >= buret_start:
+        volume_buret = buret_end - buret_start
+    else:
+        volume_buret = 0.0
+        st.warning("Volume akhir tidak boleh lebih kecil dari volume awal.")
+
+    volume_labu = float(labu_ukur.split()[0]) if labu_ukur != "Tidak digunakan" else 0.0
+
+    # Simulasi error (±0.05 mL misalnya)
+    error_pipet = round(random.uniform(-0.05, 0.05), 2)
+    error_buret = round(random.uniform(-0.05, 0.05), 2)
+    error_labu = round(random.uniform(-0.1, 0.1), 2)
+
+    total_volume = pipet + volume_buret + volume_labu
+    total_error = error_pipet + error_buret + error_labu
+
+    st.success(f"📦 **Total Volume Cairan (tanpa error):** {total_volume:.2f} mL")
+    st.info(f"⚠️ **Dengan toleransi pengukuran: ±{abs(total_error):.2f} mL**")
+
+    st.markdown("---")
+    st.subheader("🧠 Kuis Cepat: Peralatan Gelas")
+
+    with st.form("kuis_alat"):
+        q1 = st.radio("1. Alat terbaik untuk mengambil volume larutan **secara tepat** adalah:", 
+                      ["Gelas ukur", "Erlenmeyer", "Pipet Volume", "Beaker"])
+        q2 = st.radio("2. Kapan kita harus membaca meniskus cairan?", 
+                      ["Dari atas", "Dari samping sejajar", "Dari bawah", "Sambil menggoyangkan alat"])
+        q3 = st.radio("3. Alat mana yang digunakan untuk membuat larutan dengan volume tepat?", 
+                      ["Buret", "Labu Ukur", "Pipet", "Beaker"])
+        submit = st.form_submit_button("💡 Cek Jawaban")
+
+    if submit:
+        benar = 0
+        if q1 == "Pipet Volume": benar += 1
+        if q2 == "Dari samping sejajar": benar += 1
+        if q3 == "Labu Ukur": benar += 1
+
+        st.success(f"✅ Jawaban benar: {benar} dari 3")
+        if benar < 3:
+            st.warning("Coba pelajari kembali bagian di atas ya!")
+        else:
+            st.balloons()
+
