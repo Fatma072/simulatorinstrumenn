@@ -139,27 +139,27 @@ elif menu == "🧴 Penanganan Bahan Kimia":
         st.warning("⚠️ **Bahaya:** Sangat korosif dan bereaksi hebat dengan air.")
 
         st.markdown("""
-        **Karakteristik:**  
+        **🧪 Karakteristik bahan kimia :**  
         - Cairan kental, tidak berwarna atau sedikit kekuningan  
         - Tidak mudah menguap, namun sangat reaktif  
         - Daya hancur tinggi terhadap jaringan hidup dan sebagian besar material
 
-        **Risiko yang terjadi:**  
+        **⚠️ Risiko yang terjadi :**  
         - Kontak dengan kulit: luka bakar parah  
         - Uapnya: iritasi saluran pernapasan  
         - Jika tercampur air: menghasilkan panas ekstrem dan percikan
 
-        **Langkah Penanganan Darurat:**  
+        **🚨 Langkah Penanganan Darurat :**  
         - Jika terkena kulit: siram dengan air mengalir minimal 15 menit  
         - Jika terkena mata: bilas mata sambil dibuka perlahan, dan segera ke rumah sakit  
         - Jika tertelan: jangan muntahkan, segera hubungi medis
 
-        **Penyimpanan Aman:**  
+        **📦 Penyimpanan Aman:**  
         - Gunakan wadah dari kaca tahan asam atau plastik khusus (HDPE)  
         - Simpan di tempat sejuk, gelap, dan berventilasi  
         - Jangan simpan dekat air, logam, atau bahan organik
 
-        **Pencegahan:**  
+        ** 🛡️Pencegahan:**  
         - Gunakan pelindung wajah, sarung tangan, dan apron kimia  
         - Selalu tambahkan asam ke air, bukan sebaliknya
         """)
@@ -169,27 +169,27 @@ elif menu == "🧴 Penanganan Bahan Kimia":
         st.warning("⚠️ **Bahaya:** Sangat basa, bersifat kaustik, dapat merusak jaringan tubuh.")
 
         st.markdown("""
-        **Karakteristik:**  
+        **🧪 Karakteristik bahan kimia:**  
         - Padatan putih atau larutan bening  
         - Bersifat higroskopis (menyerap uap air)  
         - Membentuk larutan yang sangat basa dan panas saat dilarutkan
 
-        **Risiko yang terjadi:**  
+        **⚠️ Risiko yang terjadi:**  
         - Iritasi atau luka bakar berat pada kulit dan mata  
         - Dapat menyebabkan kerusakan permanen jika kontak mata lama  
         - Uap dapat menyebabkan iritasi saluran pernapasan
 
-        **Langkah Penanganan Darurat:**  
+        **🚨 Langkah Penanganan Darurat:**  
         - Kulit terkena: bilas dengan air tanpa henti selama 20 menit  
         - Mata terkena: bilas dengan larutan saline atau air bersih segera  
         - Jika tertelan: jangan dipaksa muntah, hubungi rumah sakit
 
-        **Penyimpanan Aman:**  
+        **📦 Penyimpanan Aman:**  
         - Simpan dalam wadah plastik tahan basa dan tertutup rapat  
         - Hindari kontak dengan bahan asam  
         - Simpan di tempat kering, sejuk, dan berventilasi
 
-        **Pencegahan:**  
+        **🛡️Pencegahan:**  
         - Gunakan sarung tangan nitril, pelindung mata, dan jas laboratorium  
         - Tangani di bawah lemari asam jika memungkinkan
         """)
@@ -199,27 +199,27 @@ elif menu == "🧴 Penanganan Bahan Kimia":
         st.warning("⚠️ **Bahaya:** Sangat mudah terbakar, menyebabkan iritasi pernapasan.")
 
         st.markdown("""
-        **Karakteristik:**  
+        **🧪 Karakteristik bahan kimia:**  
         - Cairan bening, sangat mudah menguap  
         - Berbau khas (seperti pelarut cat kuku)  
         - Digunakan sebagai pelarut di banyak industri
 
-        **Risiko yang terjadi:**  
+        **⚠️ Risiko yang terjadi:**  
         - Menghirup uapnya menyebabkan pusing, sakit kepala, mual  
         - Kontak kulit menyebabkan kekeringan dan iritasi  
         - Bahaya kebakaran tinggi bahkan pada suhu ruangan
 
-        **Langkah Penanganan Darurat:**  
+        **🚨 Langkah Penanganan Darurat:**  
         - Hirup uap: segera ke area berventilasi atau udara segar  
         - Kontak kulit: cuci dengan sabun dan air  
         - Terbakar: gunakan APAR CO₂ atau dry chemical
 
-        **Penyimpanan Aman:**  
+        **📦 Penyimpanan Aman:**  
         - Gunakan wadah logam tahan pelarut dengan tutup rapat  
         - Jauhkan dari sumber api, percikan, dan listrik statis  
         - Simpan di kabinet bahan mudah terbakar (flammable storage)
 
-        **Pencegahan:**  
+        **🛡️Pencegahan:**  
         - Gunakan di ruangan terbuka atau berventilasi baik  
         - Hindari menghirup uap secara langsung
         """)
@@ -229,27 +229,27 @@ elif menu == "🧴 Penanganan Bahan Kimia":
         st.warning("⚠️ **Bahaya:** Oksidator kuat, reaktif, dan dapat menyebabkan luka bakar kimia.")
 
         st.markdown("""
-        **Karakteristik:**  
+        **🧪 Karakteristik bahan kimia:**  
         - Larutan bening, mirip air, tapi sangat reaktif  
         - Konsentrasi tinggi (di atas 30%) sangat berbahaya  
         - Digunakan sebagai desinfektan dan agen pemutih
 
-        **Risiko yang terjadi:**  
+        **⚠️ Risiko yang terjadi:**  
         - Kulit: luka bakar, iritasi  
         - Mata: iritasi serius atau kebutaan permanen  
         - Reaksi eksplosif jika kontak logam, bahan organik, atau panas
 
-        **Langkah Penanganan Darurat:**  
+        **🚨 Langkah Penanganan Darurat:**  
         - Kulit terkena: bilas dengan air 15 menit  
         - Mata terkena: segera cuci mata dan hubungi dokter  
         - Terhirup: pindahkan ke area udara segar dan beri oksigen jika perlu
 
-        **Penyimpanan Aman:**  
+        **📦 Penyimpanan Aman:**  
         - Simpan dalam botol berwarna gelap, jauh dari cahaya  
         - Hindari suhu tinggi dan bahan logam  
         - Gunakan wadah asli yang tahan oksidasi
 
-        **Pencegahan:**  
+        **🛡️Pencegahan:**  
         - Gunakan pelindung mata dan sarung tangan neoprene  
         - Hindari penggunaan logam atau benda berkarat saat menanganinya
         """)
