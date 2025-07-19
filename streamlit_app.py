@@ -487,7 +487,13 @@ elif menu == "🧴 Penanganan Bahan Kimia":
 
 # ==================== Halaman K3 ====================
 elif menu == "🛡 Keselamatan Kerja (K3)":
+
+st.set_page_config(page_title="🧯 Keselamatan Kerja di Laboratorium", layout="centered")
+
 st.title("🧪🔬 Keselamatan Kerja di Laboratorium Kimia 🧤🦺")
+
+st.markdown("""
+---
 
 ## 📚 *Pendahuluan*
 Keselamatan kerja 🔒 di laboratorium adalah hal yang sangat penting untuk:
@@ -522,4 +528,45 @@ Keselamatan kerja 🔒 di laboratorium adalah hal yang sangat penting untuk:
 
 ### 💧 Tumpahan Bahan Kimia
 - Gunakan *Spill Kit* 🧯
-- Tutup dan beri tanda peringata
+- Tutup dan beri tanda peringatan 🚧
+- Segera laporkan ke dosen atau teknisi 📢
+
+### 🔥 Luka Bakar Kimia
+- Bilas air mengalir 🚿 selama 15 menit
+- Lepas pakaian yang terkena bahan 👕
+- Segera cari pertolongan medis 🚑
+
+---
+
+## ⚠ *Pencegahan Umum*
+
+- 🧍‍♂ *Jangan bekerja sendirian* di lab
+- 🩻 *Periksa alat sebelum digunakan*
+- 🚫 Hindari baju longgar, sandal, dan aksesori
+- 🌬 Pastikan ventilasi lab berfungsi baik
+
+---
+
+## 🧪 *Pengelolaan Limbah Laboratorium*
+
+♻ *Pisahkan limbah berdasarkan jenis*:
+- 🧴 Organik
+- 🧂 Anorganik
+- ☣ B3 (Bahan Berbahaya & Beracun)
+
+🚫 *Jangan buang limbah ke wastafel* sembarangan  
+🗑 Gunakan wadah limbah bertanda khusus
+
+---
+
+## ✅ *Penutup*
+
+🏁 Keselamatan kerja adalah tanggung jawab bersama.  
+Dengan disiplin dan kesadaran, kita bisa menciptakan laboratorium yang:
+
+🎯 Aman 🧘 Nyaman 🌱 Ramah Lingkungan
+
+> ✨ *"Selalu waspada, tetap selamat!"* ✨
+
+---
+""")
