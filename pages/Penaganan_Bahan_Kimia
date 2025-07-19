@@ -8,10 +8,7 @@ from sklearn.linear_model import LinearRegression
 st.set_page_config(page_title="Penanganan Bahan Kimia", layout="wide")
 st.title("🧴 Penanganan Bahan Kimia")
 
-elif menu == "🧴 Penanganan Bahan Kimia":
-    st.title("🧴 Penanganan Bahan Kimia")
-
-    st.markdown("""
+st.markdown("""
     Bahan kimia di laboratorium dapat bersifat berbahaya jika tidak ditangani dengan benar.  
     Berikut ini adalah panduan lengkap untuk memahami risiko serta cara penanganan dan penyimpanan dari beberapa bahan kimia umum.
     """)
