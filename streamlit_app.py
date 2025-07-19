@@ -32,7 +32,7 @@ if menu == "🏠 Beranda":
 elif menu == "🔬 Spektrofotometer":
     st.title("🔬 Simulasi Spektrofotometer UV-Vis")
 
-   st.subheader("🔬 1. Simulasi Spektrum UV-Vis (λ Maksimal)")
+st.subheader("🔬 1. Simulasi Spektrum UV-Vis (λ Maksimal)")
 st.write("Simulasi ini menampilkan grafik absorbansi terhadap panjang gelombang.")
 
 # Input manual data UV-Vis
