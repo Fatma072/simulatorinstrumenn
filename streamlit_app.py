@@ -567,7 +567,6 @@ Dengan disiplin dan kesadaran, kita bisa menciptakan laboratorium yang:
 """)
 
 # ==================== Halaman Alat Dasar Lab ====================
-
 elif menu == "🧰 Alat Dasar Lab":
     st.title("🧰 Peralatan Dasar Laboratorium Kimia")
 
@@ -577,15 +576,13 @@ elif menu == "🧰 Alat Dasar Lab":
     """)
 
     with st.expander("🔍 Pipet Volume"):
-        st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Volumetric_pipette.png/250px-Volumetric_pipette.png", width=200)
         st.markdown("""
         - Gunakan pipet pengisap (jangan pakai mulut).
-      - Ambil larutan hingga tepat di garis kalibrasi.
+        - Ambil larutan hingga tepat di garis kalibrasi.
         - Hindari gelembung.
         """)
 
     with st.expander("🔍 Buret"):
-        st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Burette_50ml.jpg/200px-Burette_50ml.jpg", width=150)
         st.markdown("""
         - Pastikan tidak ada gelembung udara di ujung buret.
         - Bacaan dilakukan sejajar dengan meniskus.
@@ -593,7 +590,6 @@ elif menu == "🧰 Alat Dasar Lab":
         """)
 
     with st.expander("🔍 Labu Ukur"):
-        st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Volumetric_flask_100ml.jpg/200px-Volumetric_flask_100ml.jpg", width=150)
         st.markdown("""
         - Gunakan untuk pembuatan larutan dengan volume tepat.
         - Tambahkan air hingga mendekati garis ukur, lalu pakai pipet tetes.
@@ -621,7 +617,7 @@ elif menu == "🧰 Alat Dasar Lab":
     # Error simulasi alat
     error_pipet = round(random.uniform(-0.05, 0.05), 2)
     error_labu = round(random.uniform(-0.1, 0.1), 2)
-  total_volume = pipet + volume_buret + volume_labu
+    total_volume = pipet + volume_buret + volume_labu
     total_error = error_pipet + error_buret + error_labu
 
     # Rincian volume
