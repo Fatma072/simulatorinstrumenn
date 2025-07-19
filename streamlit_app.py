@@ -642,35 +642,38 @@ elif menu == "🧰 Alat Dasar Lab":
     with st.form("kuis_alat"):
       
 # Data soal: list of dict (soal, pilihan, jawaban benar)
+st.set_page_config(page_title="Kuis Peralatan Gelas", layout="centered")
+
+# Daftar soal (isi dengan pertanyaan sesuai kebutuhan)
 soal_list = [
     {
-        "question": "Alat terbaik untuk mengambil volume larutan secara tepat adalah:",
-        "options": ["Gelas ukur", "Erlenmeyer", "Pipet Volume", "Beaker"],
-        "answer": "Pipet Volume"
+        "question": "Apa nama alat gelas ini yang digunakan untuk mengukur volume dengan akurasi tinggi?",
+        "options": ["Gelas ukur", "Buret", "Erlenmeyer", "Pipet tetes"],
+        "answer": "Buret"
     },
     {
-        "question": "Kapan kita harus membaca meniskus cairan?",
-        "options": ["Dari atas", "Dari samping sejajar", "Dari bawah", "Sambil menggoyangkan alat"],
-        "answer": "Dari samping sejajar"
+        "question": "Alat gelas berbentuk kerucut yang biasa digunakan untuk mencampur larutan adalah?",
+        "options": ["Tabung reaksi", "Erlenmeyer", "Buret", "Pipet ukur"],
+        "answer": "Erlenmeyer"
     },
     {
-        "question": "Alat mana yang digunakan untuk membuat larutan dengan volume tepat?",
-        "options": ["Buret", "Labu Ukur", "Pipet", "Beaker"],
-        "answer": "Labu Ukur"
+        "question": "Gelas ukur digunakan untuk...",
+        "options": ["Reaksi kimia", "Mengaduk larutan", "Mengukur volume larutan", "Memisahkan zat padat"],
+        "answer": "Mengukur volume larutan"
     },
     {
-        "question": "Fungsi utama buret dalam titrasi adalah:",
-        "options": ["Mengukur massa", "Mengukur volume dengan presisi", "Membuat larutan", "Menampung hasil reaksi"],
-        "answer": "Mengukur volume dengan presisi"
+        "question": "Pipet ukur digunakan untuk...",
+        "options": ["Memindahkan larutan dalam jumlah tetap", "Mengaduk larutan", "Memanaskan cairan", "Mengukur pH"],
+        "answer": "Memindahkan larutan dalam jumlah tetap"
     },
     {
-        "question": "Bagian yang harus dicek saat menggunakan pipet adalah:",
-        "options": ["Kebersihan ujung", "Kadar larutan", "Warna larutan", "Berat pipet"],
-        "answer": "Kebersihan ujung"
-    }
+        "question": "Alat yang digunakan untuk mereaksikan larutan dalam jumlah kecil adalah...",
+        "options": ["Erlenmeyer", "Buret", "Tabung reaksi", "Gelas ukur"],
+        "answer": "Tabung reaksi"
+    },
 ]
 
-# Pilih 3 soal secara acak tiap run
+# Pilih 3 soal secara acak tiap kali aplikasi dijalankan
 soal_terpilih = random.sample(soal_list, 3)
 
 st.subheader("🧠 Kuis Cepat: Peralatan Gelas")
