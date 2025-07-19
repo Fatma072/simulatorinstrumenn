@@ -29,8 +29,8 @@ def halaman_beranda():
         </style>
         """, unsafe_allow_html=True
     )
-   
-    st.info("💡 **Tips:** Gunakan menu sebelah kiri untuk navigasi antar modul aplikasi.")
+    st.markdown("---")
+    st.info("💡 *Tips:* Gunakan menu sebelah kiri untuk navigasi antar modul aplikasi.")
     st.markdown('<p class="big-font">💡 Aplikasi Simulator Instrumen Kimia</p>', unsafe_allow_html=True)
     st.markdown('<p class="medium-font">Selamat Datang 👋</p>', unsafe_allow_html=True)
 
@@ -58,13 +58,16 @@ def halaman_beranda():
         st.write("Tips dan aturan penanganan bahan kimia yang aman.")
 
     with col2:
-        st.markdown("### 🛡️ Keselamatan Kerja (K3)")
+        st.markdown("### 🛡 Keselamatan Kerja (K3)")
         st.write("Informasi dan prosedur keselamatan kerja laboratorium.")
         st.markdown("### 🧰 Alat Dasar Lab")
         st.write("Panduan alat gelas dasar laboratorium dan simulasi pengukuran volume.")
 
+    st.markdown("---")
+    st.info("💡 *Tips:* Gunakan menu sebelah kiri untuk navigasi antar modul aplikasi.")
 
-if __name__ == "__main__":
+
+if _name_ == "_main_":
     halaman_beranda()
 
 # Konfigurasi halaman
@@ -84,7 +87,12 @@ menu = st.sidebar.selectbox(
 
 # ==================== Halaman Beranda ====================
 if menu == "🏠 Beranda":
- st.markdown("## 📋 Menu Utama")
+    st.title("💡 Aplikasi Simulator Instrumen Kimia")
+    st.markdown("""
+    ## Selamat Datang 👋
+    Aplikasi ini membantu Anda memahami berbagai simulasi instrumen laboratorium kimia, 
+    serta menyediakan panduan penanganan bahan kimia dan keselamatan kerja (K3).
+    """)
 
 # ==================== Halaman Spektrofotometer ====================
 elif menu == "🔬 Spektrofotometer":
@@ -130,7 +138,6 @@ elif menu == "🔬 Spektrofotometer":
     else:
         st.info("Silakan masukkan data panjang gelombang dan absorbansi di atas untuk melihat grafik.")
 
-
     # ==================== Simulasi Kurva Kalibrasi ====================
     st.subheader("2. Simulasi Kurva Kalibrasi")
     default_data = {
@@ -152,7 +159,7 @@ elif menu == "🔬 Spektrofotometer":
     r2 = model.score(X, y)
 
     st.markdown(f"""
-    *Persamaan regresi:*  
+    Persamaan regresi:  
     Absorbansi = {slope:.4f} × Konsentrasi + {intercept:.4f}  
     Koefisien determinasi (R²) = {r2:.4f}
     """)
@@ -174,7 +181,7 @@ elif menu == "🔬 Spektrofotometer":
     if st.button("Hitung Konsentrasi"):
         try:
             konsentrasi = (absorbansi_sampel - intercept_input) / slope_input
-            st.success(f"Perkiraan konsentrasi sampel: *{konsentrasi:.2f} ppm*")
+            st.success(f"Perkiraan konsentrasi sampel: {konsentrasi:.2f} ppm")
         except ZeroDivisionError:
             st.error("Slope tidak boleh nol.")
 
@@ -203,25 +210,25 @@ elif menu == "🧴 Penanganan Bahan Kimia":
 
     if bahan == "Asam Sulfat (H₂SO₄)":
         st.header("Asam Sulfat (H₂SO₄)")
-        st.warning("⚠ *Bahaya:* Sangat korosif dan bereaksi hebat dengan air.")
+        st.warning("⚠ Bahaya: Sangat korosif dan bereaksi hebat dengan air.")
 
         st.markdown("""
-        *🧪 Karakteristik bahan kimia :*  
+        🧪 Karakteristik bahan kimia :  
         - Cairan kental, tidak berwarna atau sedikit kekuningan  
         - Tidak mudah menguap, namun sangat reaktif  
         - Daya hancur tinggi terhadap jaringan hidup dan sebagian besar material
 
-        *⚠ Risiko yang terjadi :*  
+        ⚠ Risiko yang terjadi :  
         - Kontak dengan kulit: luka bakar parah  
         - Uapnya: iritasi saluran pernapasan  
         - Jika tercampur air: menghasilkan panas ekstrem dan percikan
 
-        *🚨 Langkah Penanganan Darurat :*  
+        🚨 Langkah Penanganan Darurat :  
         - Jika terkena kulit: siram dengan air mengalir minimal 15 menit  
         - Jika terkena mata: bilas mata sambil dibuka perlahan, dan segera ke rumah sakit  
         - Jika tertelan: jangan muntahkan, segera hubungi medis
 
-        *📦 Penyimpanan Aman:*  
+        📦 Penyimpanan Aman:  
         - Gunakan wadah dari kaca tahan asam atau plastik khusus (HDPE)  
         - Simpan di tempat sejuk, gelap, dan berventilasi  
         - Jangan simpan dekat air, logam, atau bahan organik
@@ -233,90 +240,90 @@ elif menu == "🧴 Penanganan Bahan Kimia":
 
     elif bahan == "Natrium Hidroksida (NaOH)":
         st.header("Natrium Hidroksida (NaOH)")
-        st.warning("⚠ *Bahaya:* Sangat basa, bersifat kaustik, dapat merusak jaringan tubuh.")
+        st.warning("⚠ Bahaya: Sangat basa, bersifat kaustik, dapat merusak jaringan tubuh.")
 
         st.markdown("""
-        *🧪 Karakteristik bahan kimia:*  
+        🧪 Karakteristik bahan kimia:  
         - Padatan putih atau larutan bening  
         - Bersifat higroskopis (menyerap uap air)  
         - Membentuk larutan yang sangat basa dan panas saat dilarutkan
 
-        *⚠ Risiko yang terjadi:*  
+        ⚠ Risiko yang terjadi:  
         - Iritasi atau luka bakar berat pada kulit dan mata  
         - Dapat menyebabkan kerusakan permanen jika kontak mata lama  
         - Uap dapat menyebabkan iritasi saluran pernapasan
 
-        *🚨 Langkah Penanganan Darurat:*  
+        🚨 Langkah Penanganan Darurat:  
         - Kulit terkena: bilas dengan air tanpa henti selama 20 menit  
         - Mata terkena: bilas dengan larutan saline atau air bersih segera  
         - Jika tertelan: jangan dipaksa muntah, hubungi rumah sakit
 
-        *📦 Penyimpanan Aman:*  
+        📦 Penyimpanan Aman:  
         - Simpan dalam wadah plastik tahan basa dan tertutup rapat  
         - Hindari kontak dengan bahan asam  
         - Simpan di tempat kering, sejuk, dan berventilasi
 
-        *🛡Pencegahan:*  
+        🛡Pencegahan:  
         - Gunakan sarung tangan nitril, pelindung mata, dan jas laboratorium  
         - Tangani di bawah lemari asam jika memungkinkan
         """)
 
     elif bahan == "Aseton (CH₃COCH₃)":
         st.header("Aseton (CH₃COCH₃)")
-        st.warning("⚠ *Bahaya:* Sangat mudah terbakar, menyebabkan iritasi pernapasan.")
+        st.warning("⚠ Bahaya: Sangat mudah terbakar, menyebabkan iritasi pernapasan.")
 
         st.markdown("""
-        *🧪 Karakteristik bahan kimia:*  
+        🧪 Karakteristik bahan kimia:  
         - Cairan bening, sangat mudah menguap  
         - Berbau khas (seperti pelarut cat kuku)  
         - Digunakan sebagai pelarut di banyak industri
 
-        *⚠ Risiko yang terjadi:*  
+        ⚠ Risiko yang terjadi:  
         - Menghirup uapnya menyebabkan pusing, sakit kepala, mual  
         - Kontak kulit menyebabkan kekeringan dan iritasi  
         - Bahaya kebakaran tinggi bahkan pada suhu ruangan
 
-        *🚨 Langkah Penanganan Darurat:*  
+        🚨 Langkah Penanganan Darurat:  
         - Hirup uap: segera ke area berventilasi atau udara segar  
         - Kontak kulit: cuci dengan sabun dan air  
         - Terbakar: gunakan APAR CO₂ atau dry chemical
 
-        *📦 Penyimpanan Aman:*  
+        📦 Penyimpanan Aman:  
         - Gunakan wadah logam tahan pelarut dengan tutup rapat  
         - Jauhkan dari sumber api, percikan, dan listrik statis  
         - Simpan di kabinet bahan mudah terbakar (flammable storage)
 
-        *🛡Pencegahan:*  
+        🛡Pencegahan:  
         - Gunakan di ruangan terbuka atau berventilasi baik  
         - Hindari menghirup uap secara langsung
         """)
 
     elif bahan == "Hidrogen Peroksida (H₂O₂)":
         st.header("Hidrogen Peroksida (H₂O₂)")
-        st.warning("⚠ *Bahaya:* Oksidator kuat, reaktif, dan dapat menyebabkan luka bakar kimia.")
+        st.warning("⚠ Bahaya: Oksidator kuat, reaktif, dan dapat menyebabkan luka bakar kimia.")
 
         st.markdown("""
-        *🧪 Karakteristik bahan kimia:*  
+        🧪 Karakteristik bahan kimia:  
         - Larutan bening, mirip air, tapi sangat reaktif  
         - Konsentrasi tinggi (di atas 30%) sangat berbahaya  
         - Digunakan sebagai desinfektan dan agen pemutih
 
-        *⚠ Risiko yang terjadi:*  
+        ⚠ Risiko yang terjadi:  
         - Kulit: luka bakar, iritasi  
         - Mata: iritasi serius atau kebutaan permanen  
         - Reaksi eksplosif jika kontak logam, bahan organik, atau panas
 
-        *🚨 Langkah Penanganan Darurat:*  
+        🚨 Langkah Penanganan Darurat:  
         - Kulit terkena: bilas dengan air 15 menit  
         - Mata terkena: segera cuci mata dan hubungi dokter  
         - Terhirup: pindahkan ke area udara segar dan beri oksigen jika perlu
 
-        *📦 Penyimpanan Aman:*  
+        📦 Penyimpanan Aman:  
         - Simpan dalam botol berwarna gelap, jauh dari cahaya  
         - Hindari suhu tinggi dan bahan logam  
         - Gunakan wadah asli yang tahan oksidasi
 
-        *🛡Pencegahan:*  
+        🛡Pencegahan:  
         - Gunakan pelindung mata dan sarung tangan neoprene  
         - Hindari penggunaan logam atau benda berkarat saat menanganinya
         """)
@@ -330,7 +337,7 @@ elif menu == "🧴 Penanganan Bahan Kimia":
         - Sangat reaktif, korosif, dan beracun  
         - Oksidator kuat, berbahaya bagi lingkungan  
 
-        ⚠ *Simbol Bahaya:*  
+        ⚠ Simbol Bahaya:  
         ☠ Racun (Toxic)  
         🧪 Korosif  
         🌿 Bahaya lingkungan  
@@ -368,7 +375,7 @@ elif menu == "🧴 Penanganan Bahan Kimia":
         - Beracun jika tertelan, terhirup, atau kontak kulit  
         - Bau alkohol yang khas  
 
-        ⚠ *Simbol Bahaya:*  
+        ⚠ Simbol Bahaya:  
         ☠ Beracun (Toxic)  
         🔥 Mudah terbakar (Flammable)  
         """)
@@ -405,7 +412,7 @@ elif menu == "🧴 Penanganan Bahan Kimia":
         - Sangat mudah larut dalam air membentuk basa kuat  
         - Dapat menyebabkan iritasi dan korosif  
         
-        ⚠ *Simbol Bahaya:*  
+        ⚠ Simbol Bahaya:  
         ☠ Racun (Toxic)  
         🧪 Korosif
         """)
@@ -441,7 +448,7 @@ elif menu == "🧴 Penanganan Bahan Kimia":
         - Cairan bening mudah menguap, bau khas  
         - Sangat mudah terbakar dan karsinogenik  
         
-        ⚠ *Simbol Bahaya:*  
+        ⚠ Simbol Bahaya:  
         ☠ Beracun (Toxic)  
         🔥 Mudah terbakar (Flammable)  
         ☣ Karsinogen
@@ -478,7 +485,7 @@ elif menu == "🧴 Penanganan Bahan Kimia":
         - Gas atau larutan berbau tajam dan menyengat  
         - Karsinogen dan iritan kuat  
         
-        ⚠ *Simbol Bahaya:*  
+        ⚠ Simbol Bahaya:  
         ☠ Beracun (Toxic)  
         ☣ Karsinogen  
         🧪 Korosif
@@ -515,7 +522,7 @@ elif menu == "🧴 Penanganan Bahan Kimia":
         - Cairan bening, bau manis  
         - Sedatif, toksik, dan kemungkinan karsinogen  
         
-        ⚠ *Simbol Bahaya:*  
+        ⚠ Simbol Bahaya:  
         ☠ Beracun (Toxic)  
         ⚠ Bahaya kesehatan (Health hazard)  
         """)
@@ -686,8 +693,8 @@ elif menu == "🧰 Alat Dasar Lab":
         st.write(f"Buret: {volume_buret:.2f} mL")
         st.write(f"Labu Ukur: {volume_labu:.2f} mL")
 
-    st.success(f"📦 *Total Volume Cairan (tanpa error):* {total_volume:.2f} mL")
-    st.info(f"⚠ *Dengan toleransi pengukuran: ±{abs(total_error):.2f} mL*")
+    st.success(f"📦 Total Volume Cairan (tanpa error): {total_volume:.2f} mL")
+    st.info(f"⚠ Dengan toleransi pengukuran: ±{abs(total_error):.2f} mL")
 
     # Konfigurasi halaman
     st.set_page_config(page_title="Kuis Peralatan Gelas", layout="centered")
@@ -753,4 +760,3 @@ elif menu == "🧰 Alat Dasar Lab":
             st.warning("Coba pelajari kembali bagian di atas ya!")
         else:
             st.balloons()
-
