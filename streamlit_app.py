@@ -118,9 +118,10 @@ else:
         except ZeroDivisionError:
             st.error("Slope tidak boleh nol.")
 
-elif menu == " Penanganan Bahan Kimia":
-    st.title("Penanganan Bahan Kimia")
-    st.write("Pelajari cara menangani bahan kimia dnegan aman di laboratorium.")
+if menu == "Beranda":
+    st.write("Ini halaman beranda.")
+elif menu == "🧴Penanganan Bahan Kimia":
+    st.write("Ini halaman penanganan bahan kimia.")
 
     bahan = st.selectbox("Pilih bahan kimia:", [
         "Asam Sulfat (H₂SO₄)",
