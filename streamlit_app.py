@@ -599,12 +599,12 @@ elif menu == "🧰 Alat Dasar Lab":
         - Tambahkan air hingga mendekati garis ukur, lalu pakai pipet tetes.
         """)
 
-    st.markdown("---")
-    st.subheader("🧪 Simulasi Pengukuran Volume")
-    pipet = st.number_input("📏 Volume dari Pipet Volume (mL)", min_value=0.0, max_value=25.0, step=0.1, value=10.0)
-    buret_start = st.number_input("💧 Volume Awal Buret (mL)", min_value=0.0, max_value=50.0, step=0.1, value=0.0)
-    buret_end = st.number_input("💧 Volume Akhir Buret (mL)", min_value=0.0, max_value=50.0, step=0.1, value=23.5)
-    labu_ukur = st.selectbox("⚗ Labu Ukur yang Digunakan", ["Tidak digunakan", "25 mL", "50 mL", "100 mL", "250 mL", "500 mL"])
+        st.markdown("---")
+        st.subheader("🧪 Simulasi Pengukuran Volume")
+        pipet = st.number_input("📏 Volume dari Pipet Volume (mL)", min_value=0.0, max_value=25.0, step=0.1, value=10.0)
+        buret_start = st.number_input("💧 Volume Awal Buret (mL)", min_value=0.0, max_value=50.0, step=0.1, value=0.0)
+        buret_end = st.number_input("💧 Volume Akhir Buret (mL)", min_value=0.0, max_value=50.0, step=0.1, value=23.5)
+        labu_ukur = st.selectbox("⚗ Labu Ukur yang Digunakan", ["Tidak digunakan", "25 mL", "50 mL", "100 mL", "250 mL", "500 mL"])
 
     # Validasi volume buret
     if buret_end >= buret_start:
