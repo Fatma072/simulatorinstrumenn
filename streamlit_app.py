@@ -14,7 +14,7 @@ menu = st.sidebar.selectbox("Pilih Menu", [
     "🧪 Spektrofotometer",
     "🧴 Penanganan Bahan Kimia",
     "🛡 Keselamatan Kerja (K3)",
-    "🧰 Alat Dasar Lab",
+    "🧰 Alat Dasar Lab"
 ])
 
 # ==================== Halaman Beranda ====================
