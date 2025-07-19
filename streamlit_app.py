@@ -569,7 +569,7 @@ Dengan disiplin dan kesadaran, kita bisa menciptakan laboratorium yang:
 
 # ==================== Halaman Alat Dasar Lab ====================
 
-elif menu == "🧰 Alat Dasar":
+elif menu == "🧰 Alat Dasar Lab":
     st.title("🧰 Peralatan Dasar Laboratorium Kimia")
 
     st.markdown("""
