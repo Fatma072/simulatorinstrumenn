@@ -19,7 +19,7 @@ menu = st.sidebar.selectbox(
         "🧰 Alat Dasar Lab"
     )
 )
-    st.markdown("---")
+    
     st.subheader("📚 Menu yang Tersedia")
 
     st.markdown("""
