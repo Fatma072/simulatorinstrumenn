@@ -8,6 +8,70 @@ from sklearn.linear_model import LinearRegression
 # Konfigurasi halaman
 st.set_page_config(page_title="Simulator Kimia", layout="wide")
 
+def halaman_beranda():
+    st.markdown(
+        """
+        <style>
+        .big-font {
+            font-size: 48px !important;
+            font-weight: 700;
+            color: #2C3E50;
+        }
+        .medium-font {
+            font-size: 24px !important;
+            color: #34495E;
+        }
+        .highlight {
+            background-color: #D6EAF8;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 18px;
+            color: #154360;
+        }
+        </style>
+        """, unsafe_allow_html=True
+    )
+
+    st.markdown('<p class="big-font">💡 Aplikasi Simulator Instrumen Kimia</p>', unsafe_allow_html=True)
+    st.markdown('<p class="medium-font">Selamat Datang 👋</p>', unsafe_allow_html=True)
+    
+    st.markdown(
+        """
+        <div class="highlight">
+        Aplikasi ini membantu Anda memahami berbagai <em>simulasi instrumen laboratorium kimia</em>,  
+        serta menyediakan panduan <em>penanganan bahan kimia</em> dan <em>keselamatan kerja (K3)</em>.
+        </div>
+        """, unsafe_allow_html=True
+    )
+
+    st.markdown("---")
+
+    st.markdown("## 📋 Menu Utama")
+
+    col1, col2 = st.columns(2)
+
+    with col1:
+        st.markdown("### 🏠 Beranda")
+        st.write("Halaman utama aplikasi dengan pengantar dan ringkasan fitur.")
+        st.markdown("### 🧪 Spektrofotometer")
+        st.write("Simulasi dan panduan penggunaan alat spektrofotometer.")
+        st.markdown("### 🧴 Penanganan Bahan Kimia")
+        st.write("Tips dan aturan penanganan bahan kimia yang aman.")
+    
+    with col2:
+        st.markdown("### 🛡️ Keselamatan Kerja (K3)")
+        st.write("Informasi dan prosedur keselamatan kerja laboratorium.")
+        st.markdown("### 🧰 Alat Dasar Lab")
+        st.write("Panduan alat gelas dasar laboratorium dan simulasi pengukuran volume.")
+
+    st.markdown("---")
+    st.info("💡 **Tips:** Gunakan menu sebelah kiri untuk navigasi antar modul aplikasi.")
+
+# Untuk testing lokal kamu bisa panggil fungsi ini
+if __name__ == "__main__":
+    halaman_beranda()
+
 # Sidebar menu
 menu = st.sidebar.selectbox("Pilih Menu", [
     "🏠 Beranda",
