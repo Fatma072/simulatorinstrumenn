@@ -29,7 +29,7 @@ def halaman_beranda():
         </style>
         """, unsafe_allow_html=True
     )
-    st.markdown("---")
+   
     st.info("💡 **Tips:** Gunakan menu sebelah kiri untuk navigasi antar modul aplikasi.")
     st.markdown('<p class="big-font">💡 Aplikasi Simulator Instrumen Kimia</p>', unsafe_allow_html=True)
     st.markdown('<p class="medium-font">Selamat Datang 👋</p>', unsafe_allow_html=True)
