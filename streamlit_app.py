@@ -63,9 +63,6 @@ def halaman_beranda():
         st.markdown("### 🧰 Alat Dasar Lab")
         st.write("Panduan alat gelas dasar laboratorium dan simulasi pengukuran volume.")
 
-    st.markdown("---")
-    st.info("💡 **Tips:** Gunakan menu sebelah kiri untuk navigasi antar modul aplikasi.")
-
 
 if __name__ == "__main__":
     halaman_beranda()
