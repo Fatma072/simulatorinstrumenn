@@ -28,6 +28,9 @@ if menu == "🏠 Beranda":
     Aplikasi ini membantu Anda memahami berbagai simulasi instrumen laboratorium kimia, 
     serta menyediakan panduan penanganan bahan kimia dan keselamatan kerja (K3).
     """)
+ st.markdown("---")
+    st.info("💡 *Tips:* Gunakan menu sebelah kiri untuk navigasi antar modul aplikasi.")
+    st.markdown('<p class="big-font">💡 Aplikasi Simulator Instrumen Kimia</p>', unsafe_allow_html=True)
 
 # ==================== Halaman Spektrofotometer ====================
 elif menu == "🔬 Spektrofotometer":
