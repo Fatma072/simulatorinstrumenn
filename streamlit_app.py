@@ -85,11 +85,7 @@ menu = st.sidebar.selectbox(
 # ==================== Halaman Beranda ====================
 if menu == "🏠 Beranda":
     st.title("💡 Aplikasi Simulator Instrumen Kimia")
-    st.markdown("""
-    ## Selamat Datang 👋
-    Aplikasi ini membantu Anda memahami berbagai *simulasi instrumen laboratorium kimia*, 
-    serta menyediakan panduan *penanganan bahan kimia* dan *keselamatan kerja (K3)*.
-    """)
+
 
 # ==================== Halaman Spektrofotometer ====================
 elif menu == "🔬 Spektrofotometer":
