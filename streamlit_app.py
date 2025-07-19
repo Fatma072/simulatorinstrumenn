@@ -570,7 +570,6 @@ Dengan disiplin dan kesadaran, kita bisa menciptakan laboratorium yang:
 """)
 
 # ==================== Halaman Alat Dasar Lab ====================
-import random
 
 elif menu == "🧰 Alat Dasar":
     st.title("🧰 Peralatan Dasar Laboratorium Kimia")
