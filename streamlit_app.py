@@ -122,7 +122,12 @@ elif menu == "🔬 Spektrofotometer":
 elif menu == "🧴 Penanganan Bahan Kimia":
     st.title("🧴 Penanganan Bahan Kimia")
 
-    bahan = st.selectbox("Pilih bahan kimia:", [
+    st.markdown("""
+    Bahan kimia di laboratorium dapat bersifat berbahaya jika tidak ditangani dengan benar.  
+    Berikut ini adalah panduan lengkap untuk memahami risiko serta cara penanganan dan penyimpanan dari beberapa bahan kimia umum.
+    """)
+
+    bahan = st.selectbox("Pilih bahan kimia yang ingin Anda pelajari:", [
         "Asam Sulfat (H₂SO₄)",
         "Natrium Hidroksida (NaOH)",
         "Aseton (CH₃COCH₃)",
@@ -130,13 +135,125 @@ elif menu == "🧴 Penanganan Bahan Kimia":
     ])
 
     if bahan == "Asam Sulfat (H₂SO₄)":
-        st.warning("⚠️ Korosif! Gunakan pelindung wajah dan sarung tangan tahan asam.")
+        st.header("Asam Sulfat (H₂SO₄)")
+        st.warning("⚠️ **Bahaya:** Sangat korosif dan bereaksi hebat dengan air.")
+
+        st.markdown("""
+        **Karakteristik:**  
+        - Cairan kental, tidak berwarna atau sedikit kekuningan  
+        - Tidak mudah menguap, namun sangat reaktif  
+        - Daya hancur tinggi terhadap jaringan hidup dan sebagian besar material
+
+        **Risiko Pajanan:**  
+        - Kontak dengan kulit: luka bakar parah  
+        - Uapnya: iritasi saluran pernapasan  
+        - Jika tercampur air: menghasilkan panas ekstrem dan percikan
+
+        **Langkah Penanganan Darurat:**  
+        - Jika terkena kulit: siram dengan air mengalir minimal 15 menit  
+        - Jika terkena mata: bilas mata sambil dibuka perlahan, dan segera ke rumah sakit  
+        - Jika tertelan: jangan muntahkan, segera hubungi medis
+
+        **Penyimpanan Aman:**  
+        - Gunakan wadah dari kaca tahan asam atau plastik khusus (HDPE)  
+        - Simpan di tempat sejuk, gelap, dan berventilasi  
+        - Jangan simpan dekat air, logam, atau bahan organik
+
+        **Pencegahan:**  
+        - Gunakan pelindung wajah, sarung tangan, dan apron kimia  
+        - Selalu tambahkan asam ke air, bukan sebaliknya
+        """)
+
     elif bahan == "Natrium Hidroksida (NaOH)":
-        st.warning("⚠️ Sangat basa dan korosif. Hindari kontak langsung.")
+        st.header("Natrium Hidroksida (NaOH)")
+        st.warning("⚠️ **Bahaya:** Sangat basa, bersifat kaustik, dapat merusak jaringan tubuh.")
+
+        st.markdown("""
+        **Karakteristik:**  
+        - Padatan putih atau larutan bening  
+        - Bersifat higroskopis (menyerap uap air)  
+        - Membentuk larutan yang sangat basa dan panas saat dilarutkan
+
+        **Risiko Pajanan:**  
+        - Iritasi atau luka bakar berat pada kulit dan mata  
+        - Dapat menyebabkan kerusakan permanen jika kontak mata lama  
+        - Uap dapat menyebabkan iritasi saluran pernapasan
+
+        **Langkah Penanganan Darurat:**  
+        - Kulit terkena: bilas dengan air tanpa henti selama 20 menit  
+        - Mata terkena: bilas dengan larutan saline atau air bersih segera  
+        - Jika tertelan: jangan dipaksa muntah, hubungi rumah sakit
+
+        **Penyimpanan Aman:**  
+        - Simpan dalam wadah plastik tahan basa dan tertutup rapat  
+        - Hindari kontak dengan bahan asam  
+        - Simpan di tempat kering, sejuk, dan berventilasi
+
+        **Pencegahan:**  
+        - Gunakan sarung tangan nitril, pelindung mata, dan jas laboratorium  
+        - Tangani di bawah lemari asam jika memungkinkan
+        """)
+
     elif bahan == "Aseton (CH₃COCH₃)":
-        st.warning("⚠️ Mudah terbakar! Gunakan di ruangan berventilasi.")
+        st.header("Aseton (CH₃COCH₃)")
+        st.warning("⚠️ **Bahaya:** Sangat mudah terbakar, menyebabkan iritasi pernapasan.")
+
+        st.markdown("""
+        **Karakteristik:**  
+        - Cairan bening, sangat mudah menguap  
+        - Berbau khas (seperti pelarut cat kuku)  
+        - Digunakan sebagai pelarut di banyak industri
+
+        **Risiko Pajanan:**  
+        - Menghirup uapnya menyebabkan pusing, sakit kepala, mual  
+        - Kontak kulit menyebabkan kekeringan dan iritasi  
+        - Bahaya kebakaran tinggi bahkan pada suhu ruangan
+
+        **Langkah Penanganan Darurat:**  
+        - Hirup uap: segera ke area berventilasi atau udara segar  
+        - Kontak kulit: cuci dengan sabun dan air  
+        - Terbakar: gunakan APAR CO₂ atau dry chemical
+
+        **Penyimpanan Aman:**  
+        - Gunakan wadah logam tahan pelarut dengan tutup rapat  
+        - Jauhkan dari sumber api, percikan, dan listrik statis  
+        - Simpan di kabinet bahan mudah terbakar (flammable storage)
+
+        **Pencegahan:**  
+        - Gunakan di ruangan terbuka atau berventilasi baik  
+        - Hindari menghirup uap secara langsung
+        """)
+
     elif bahan == "Hidrogen Peroksida (H₂O₂)":
-        st.warning("⚠️ Oksidator kuat. Hindari kontak dengan bahan organik.")
+        st.header("Hidrogen Peroksida (H₂O₂)")
+        st.warning("⚠️ **Bahaya:** Oksidator kuat, reaktif, dan dapat menyebabkan luka bakar kimia.")
+
+        st.markdown("""
+        **Karakteristik:**  
+        - Larutan bening, mirip air, tapi sangat reaktif  
+        - Konsentrasi tinggi (di atas 30%) sangat berbahaya  
+        - Digunakan sebagai desinfektan dan agen pemutih
+
+        **Risiko Pajanan:**  
+        - Kulit: luka bakar, iritasi  
+        - Mata: iritasi serius atau kebutaan permanen  
+        - Reaksi eksplosif jika kontak logam, bahan organik, atau panas
+
+        **Langkah Penanganan Darurat:**  
+        - Kulit terkena: bilas dengan air 15 menit  
+        - Mata terkena: segera cuci mata dan hubungi dokter  
+        - Terhirup: pindahkan ke area udara segar dan beri oksigen jika perlu
+
+        **Penyimpanan Aman:**  
+        - Simpan dalam botol berwarna gelap, jauh dari cahaya  
+        - Hindari suhu tinggi dan bahan logam  
+        - Gunakan wadah asli yang tahan oksidasi
+
+        **Pencegahan:**  
+        - Gunakan pelindung mata dan sarung tangan neoprene  
+        - Hindari penggunaan logam atau benda berkarat saat menanganinya
+        """)
+
 
 # ==================== Halaman K3 ====================
 elif menu == "🛡️ Keselamatan Kerja (K3)":
