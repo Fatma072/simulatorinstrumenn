@@ -489,9 +489,6 @@ elif menu == "🧴 Penanganan Bahan Kimia":
 elif menu == "🛡 Keselamatan Kerja (K3)":
 st.title("🧪🔬 Keselamatan Kerja di Laboratorium Kimia 🧤🦺")
 
-st.markdown("""
----
-
 ## 📚 *Pendahuluan*
 Keselamatan kerja 🔒 di laboratorium adalah hal yang sangat penting untuk:
 - 🛑 Menghindari kecelakaan
