@@ -55,6 +55,8 @@ elif menu == "🧴 Penanganan Bahan Kimia":
     """)
 
 elif menu == "🛡️ Keselamatan Kerja (K3)":
-    st.title("🛡️ Keselam
-
+    st.title("🛡️ Keselamatan dan Kesehatan Kerja (K3)")
+    st.write("""
+    Informasi tentang keselamatan laboratorium dan alat pelindung diri (APD).
+    """)
 
