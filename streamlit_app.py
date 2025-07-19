@@ -7,7 +7,6 @@ from sklearn.linear_model import LinearRegression
 
 # Konfigurasi halaman
 st.set_page_config(page_title="Simulator Kimia", layout="wide")
- st.markdown("---")
     st.info("💡 **Tips:** Gunakan menu sebelah kiri untuk navigasi antar modul aplikasi.")
 
 def halaman_beranda():
