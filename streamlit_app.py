@@ -636,67 +636,69 @@ elif menu == "🧰 Alat Dasar Lab":
     st.success(f"📦 **Total Volume Cairan (tanpa error):** {total_volume:.2f} mL")
     st.info(f"⚠️ **Dengan toleransi pengukuran: ±{abs(total_error):.2f} mL**")
 
-# Konfigurasi halaman
-st.set_page_config(page_title="Kuis Peralatan Gelas", layout="centered")
+    # Konfigurasi halaman
+    st.set_page_config(page_title="Kuis Peralatan Gelas", layout="centered")
+    
+    # Garis pemisah dan judul
+    st.markdown("---")
+    st.subheader("🧠 Kuis Cepat: Peralatan Gelas")
+    
+    # Daftar soal
+    soal_list = [
+        {
+            "question": "Apa nama alat gelas ini yang digunakan untuk mengukur volume dengan akurasi tinggi?",
+            "options": ["Gelas ukur", "Buret", "Erlenmeyer", "Pipet tetes"],
+            "answer": "Buret"
+        },
+        {
+            "question": "Alat gelas berbentuk kerucut yang biasa digunakan untuk mencampur larutan adalah?",
+            "options": ["Tabung reaksi", "Erlenmeyer", "Buret", "Pipet ukur"],
+            "answer": "Erlenmeyer"
+        },
+        {
+            "question": "Gelas ukur digunakan untuk...",
+            "options": ["Reaksi kimia", "Mengaduk larutan", "Mengukur volume larutan", "Memisahkan zat padat"],
+            "answer": "Mengukur volume larutan"
+        },
+        {
+            "question": "Pipet ukur digunakan untuk...",
+            "options": ["Memindahkan larutan dalam jumlah tetap", "Mengaduk larutan", "Memanaskan cairan", "Mengukur pH"],
+            "answer": "Memindahkan larutan dalam jumlah tetap"
+        },
+        {
+            "question": "Alat yang digunakan untuk mereaksikan larutan dalam jumlah kecil adalah...",
+            "options": ["Erlenmeyer", "Buret", "Tabung reaksi", "Gelas ukur"],
+            "answer": "Tabung reaksi"
+        },
+    ]
+    
+    # Pilih 3 soal secara acak
+    soal_terpilih = random.sample(soal_list, 3)
+    
+    # Form kuis
+    with st.form("kuis_alat"):
+        jawaban_user = []
+        for i, soal in enumerate(soal_terpilih):
+            jawaban = st.radio(
+                f"{i+1}. {soal['question']}",
+                soal['options'],
+                key=f"soal_{i}"
+            )
+            jawaban_user.append(jawaban)
+    
+        submit = st.form_submit_button("💡 Cek Jawaban")
+    
+    # Evaluasi hasil
+    if submit:
+        benar = 0
+        for i, soal in enumerate(soal_terpilih):
+            if jawaban_user[i] == soal["answer"]:
+                benar += 1
+    
+        st.success(f"✅ Jawaban benar: {benar} dari {len(soal_terpilih)}")
+        if benar < len(soal_terpilih):
+            st.warning("Coba pelajari kembali bagian di atas ya!")
+        else:
+            st.balloons()
 
-# Garis pemisah dan judul
-st.markdown("---")
-st.subheader("🧠 Kuis Cepat: Peralatan Gelas")
-
-# Daftar soal
-soal_list = [
-    {
-        "question": "Apa nama alat gelas ini yang digunakan untuk mengukur volume dengan akurasi tinggi?",
-        "options": ["Gelas ukur", "Buret", "Erlenmeyer", "Pipet tetes"],
-        "answer": "Buret"
-    },
-    {
-        "question": "Alat gelas berbentuk kerucut yang biasa digunakan untuk mencampur larutan adalah?",
-        "options": ["Tabung reaksi", "Erlenmeyer", "Buret", "Pipet ukur"],
-        "answer": "Erlenmeyer"
-    },
-    {
-        "question": "Gelas ukur digunakan untuk...",
-        "options": ["Reaksi kimia", "Mengaduk larutan", "Mengukur volume larutan", "Memisahkan zat padat"],
-        "answer": "Mengukur volume larutan"
-    },
-    {
-        "question": "Pipet ukur digunakan untuk...",
-        "options": ["Memindahkan larutan dalam jumlah tetap", "Mengaduk larutan", "Memanaskan cairan", "Mengukur pH"],
-        "answer": "Memindahkan larutan dalam jumlah tetap"
-    },
-    {
-        "question": "Alat yang digunakan untuk mereaksikan larutan dalam jumlah kecil adalah...",
-        "options": ["Erlenmeyer", "Buret", "Tabung reaksi", "Gelas ukur"],
-        "answer": "Tabung reaksi"
-    },
-]
-
-# Pilih 3 soal secara acak
-soal_terpilih = random.sample(soal_list, 3)
-
-# Form kuis
-with st.form("kuis_alat"):
-    jawaban_user = []
-    for i, soal in enumerate(soal_terpilih):
-        jawaban = st.radio(
-            f"{i+1}. {soal['question']}",
-            soal['options'],
-            key=f"soal_{i}"
-        )
-        jawaban_user.append(jawaban)
-
-    submit = st.form_submit_button("💡 Cek Jawaban")
-
-# Evaluasi hasil
-if submit:
-    benar = 0
-    for i, soal in enumerate(soal_terpilih):
-        if jawaban_user[i] == soal["answer"]:
-            benar += 1
-
-    st.success(f"✅ Jawaban benar: {benar} dari {len(soal_terpilih)}")
-    if benar < len(soal_terpilih):
-        st.warning("Coba pelajari kembali bagian di atas ya!")
-    else:
-        st.balloons()
+        
