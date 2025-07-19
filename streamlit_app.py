@@ -131,7 +131,7 @@ elif menu == "🧴 Penanganan Bahan Kimia":
         "Asam Sulfat (H₂SO₄)",
         "Natrium Hidroksida (NaOH)",
         "Aseton (CH₃COCH₃)",
-        "Hidrogen Peroksida (H₂O₂)"
+        "Hidrogen Peroksida (H₂O₂)",
         "Klorin (Cl₂)",
         "Metanol (CH₃OH)",
         "Amonia (NH₃)",
