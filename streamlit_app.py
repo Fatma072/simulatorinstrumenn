@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import random
 from sklearn.linear_model import LinearRegression
 
 # Konfigurasi halaman
@@ -607,21 +608,30 @@ elif menu == "🧰 Alat Dasar":
     buret_end = st.number_input("💧 Volume Akhir Buret (mL)", min_value=0.0, max_value=50.0, step=0.1, value=23.5)
     labu_ukur = st.selectbox("⚗ Labu Ukur yang Digunakan", ["Tidak digunakan", "25 mL", "50 mL", "100 mL", "250 mL", "500 mL"])
 
+    # Validasi volume buret
     if buret_end >= buret_start:
         volume_buret = buret_end - buret_start
+        error_buret = round(random.uniform(-0.05, 0.05), 2)
     else:
+        st.warning("⚠️ Volume akhir tidak boleh lebih kecil dari volume awal.")
         volume_buret = 0.0
-        st.warning("Volume akhir tidak boleh lebih kecil dari volume awal.")
+        error_buret = 0.0
 
+    # Volume labu ukur
     volume_labu = float(labu_ukur.split()[0]) if labu_ukur != "Tidak digunakan" else 0.0
 
-    # Simulasi error (±0.05 mL misalnya)
+    # Error simulasi alat
     error_pipet = round(random.uniform(-0.05, 0.05), 2)
-    error_buret = round(random.uniform(-0.05, 0.05), 2)
     error_labu = round(random.uniform(-0.1, 0.1), 2)
 
     total_volume = pipet + volume_buret + volume_labu
     total_error = error_pipet + error_buret + error_labu
+
+    # Rincian volume
+    with st.expander("📊 Rincian Volume"):
+        st.write(f"Pipet Volume: {pipet:.2f} mL")
+        st.write(f"Buret: {volume_buret:.2f} mL")
+        st.write(f"Labu Ukur: {volume_labu:.2f} mL")
 
     st.success(f"📦 **Total Volume Cairan (tanpa error):** {total_volume:.2f} mL")
     st.info(f"⚠️ **Dengan toleransi pengukuran: ±{abs(total_error):.2f} mL**")
@@ -640,13 +650,27 @@ elif menu == "🧰 Alat Dasar":
 
     if submit:
         benar = 0
-        if q1 == "Pipet Volume": benar += 1
-        if q2 == "Dari samping sejajar": benar += 1
-        if q3 == "Labu Ukur": benar += 1
+        feedback = []
+
+        if q1 == "Pipet Volume":
+            benar += 1
+        else:
+            feedback.append("❌ Soal 1: Jawaban benar adalah **Pipet Volume**.")
+
+        if q2 == "Dari samping sejajar":
+            benar += 1
+        else:
+            feedback.append("❌ Soal 2: Jawaban benar adalah **Dari samping sejajar**.")
+
+        if q3 == "Labu Ukur":
+            benar += 1
+        else:
+            feedback.append("❌ Soal 3: Jawaban benar adalah **Labu Ukur**.")
 
         st.success(f"✅ Jawaban benar: {benar} dari 3")
         if benar < 3:
+            for f in feedback:
+                st.markdown(f)
             st.warning("Coba pelajari kembali bagian di atas ya!")
         else:
             st.balloons()
-
