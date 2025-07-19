@@ -130,7 +130,6 @@ elif menu == "🔬 Spektrofotometer":
     else:
         st.info("Silakan masukkan data panjang gelombang dan absorbansi di atas untuk melihat grafik.")
 
-     st.markdown("## 📋 Menu Utama")
 
     # ==================== Simulasi Kurva Kalibrasi ====================
     st.subheader("2. Simulasi Kurva Kalibrasi")
