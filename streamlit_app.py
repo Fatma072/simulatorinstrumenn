@@ -120,7 +120,7 @@ else:
 
 # Lanjutkan dengan menu lainnya...
 
-elif menu == "🧴 Penanganan Bahan Kimia":
+    elif menu == "🧴 Penanganan Bahan Kimia":
     st.title("🧴 Penanganan Bahan Kimia")
     st.write("Pelajari cara menangani bahan kimia dengan aman di laboratorium.")
 
