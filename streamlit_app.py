@@ -488,8 +488,6 @@ elif menu == "🧴 Penanganan Bahan Kimia":
 # ==================== Halaman K3 ====================
 elif menu == "🛡 Keselamatan Kerja (K3)":
 
-st.set_page_config(page_title="🧯 Keselamatan Kerja di Laboratorium", layout="centered")
-
 st.title("🧪🔬 Keselamatan Kerja di Laboratorium Kimia 🧤🦺")
 
 st.markdown("""
