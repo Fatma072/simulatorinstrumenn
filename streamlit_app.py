@@ -78,7 +78,6 @@ menu = st.sidebar.selectbox("Pilih Menu", [
     "🛡 Keselamatan Kerja (K3)",
     "🧰 Alat Dasar Lab"
 ])
-import streamlit as st
 
 def halaman_beranda():
     st.title("🏠 Beranda")
