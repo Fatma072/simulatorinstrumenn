@@ -121,7 +121,37 @@ else:
 # Lanjutkan dengan menu lainnya...
 
 elif menu == "🧴 Penanganan Bahan Kimia":
-    st.write("Konten bahan kimia")
+    st.title("🧴 Penanganan Bahan Kimia")
+    st.write("Pelajari cara menangani bahan kimia dengan aman di laboratorium.")
+
+    # Daftar bahan kimia umum
+    bahan = st.selectbox("Pilih bahan kimia:", [
+        "Asam Sulfat (H₂SO₄)",
+        "Natrium Hidroksida (NaOH)",
+        "Aseton (CH₃COCH₃)",
+        "Hidrogen Peroksida (H₂O₂)"
+    ])
+
+ # Informasi berdasarkan pilihan
+    if bahan == "Asam Sulfat (H₂SO₄)":
+        st.warning("⚠️ Korosif! Gunakan pelindung wajah, sarung tangan tahan asam, dan jas lab.")
+        st.info("Jika terkena kulit: bilas dengan air mengalir selama 15 menit.")
+
+    elif bahan == "Natrium Hidroksida (NaOH)":
+        st.warning("⚠️ Sangat basa dan korosif. Hindari kontak langsung.")
+        st.info("Jika tertelan: jangan memaksakan muntah. Segera ke medis.")
+
+    elif bahan == "Aseton (CH₃COCH₃)":
+        st.warning("⚠️ Mudah terbakar! Gunakan di ruangan berventilasi.")
+        st.info("Jika terhirup: pindahkan ke udara segar.")
+
+    elif bahan == "Hidrogen Peroksida (H₂O₂)":
+        st.warning("⚠️ Oksidator kuat. Hindari kontak dengan bahan organik.")
+        st.info("Gunakan konsentrasi rendah (<6%) untuk penggunaan umum.")
+
+    # Tambahkan gambar atau tabel jika perlu
+    st.markdown("---")
+    st.markdown("🧯 **Ingat selalu prinsip K3: Kenali, Cegah, dan Tanggap!**")
 
 elif menu == "🛡️ Keselamatan Kerja (K3)":
     st.title("🛡️ Keselamatan dan Kesehatan Kerja (K3)")
