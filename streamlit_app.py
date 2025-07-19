@@ -28,6 +28,97 @@ if menu == "🏠 Beranda":
     Aplikasi ini membantu Anda memahami berbagai simulasi instrumen laboratorium kimia, 
     serta menyediakan panduan penanganan bahan kimia dan keselamatan kerja (K3).
     """)
+import streamlit as st
+import random
+
+# Contoh quotes atau tips lab kimia
+quotes = [
+    "🔬 Selalu gunakan alat pelindung diri saat bekerja di lab!",
+    "💡 Kalibrasi alat secara rutin untuk hasil akurat.",
+    "⚗️ Simpan bahan kimia sesuai aturan keamanan.",
+    "🧪 Catat semua pengamatan dengan detail."
+]
+
+# Quote harian acak
+daily_quote = random.choice(quotes)
+
+# Halaman Beranda
+def beranda():
+    st.title("💡 Aplikasi Simulator Instrumen Kimia")
+    st.header("Selamat Datang 👋")
+    st.write("Aplikasi ini membantu Anda memahami berbagai simulasi instrumen laboratorium kimia, serta menyediakan panduan penanganan bahan kimia dan keselamatan kerja (K3).")
+
+    st.markdown("---")
+
+    # Quote atau tips harian
+    st.info(f"📌 **Tips Laboratorium Hari Ini:** {daily_quote}")
+
+    # Statistik sederhana (contoh statis, bisa dihubungkan dengan data nyata)
+    col1, col2, col3 = st.columns(3)
+    col1.metric("📋 Menu Tersedia", 5)
+    col2.metric("👥 Pengguna Aktif", 120)
+    col3.metric("⏳ Rata-rata Waktu Sesi", "5 menit")
+
+    st.markdown("---")
+
+    # Tombol navigasi yang menarik ke halaman lain
+    st.write("### Jelajahi Menu Lainnya")
+    if st.button("🔒 Keselamatan Kerja (K3)"):
+        st.session_state['menu'] = "Keselamatan Kerja (K3)"
+        st.experimental_rerun()
+
+    if st.button("🧰 Alat Dasar Lab"):
+        st.session_state['menu'] = "Alat Dasar Lab"
+        st.experimental_rerun()
+
+    if st.button("🧴 Penanganan Bahan Kimia"):
+        st.session_state['menu'] = "Penanganan Bahan Kimia"
+        st.experimental_rerun()
+
+    if st.button("🔬 Spektrofotometer"):
+        st.session_state['menu'] = "Spektrofotometer"
+        st.experimental_rerun()
+
+    st.markdown("---")
+
+    # FAQ sederhana
+    st.write("### FAQ Singkat")
+    with st.expander("Apa itu simulator instrumen kimia?"):
+        st.write("Simulator ini adalah aplikasi untuk memahami cara kerja dan penggunaan alat-alat laboratorium kimia secara virtual.")
+
+    with st.expander("Bagaimana cara menggunakan aplikasi ini?"):
+        st.write("Pilih menu di sidebar atau klik tombol yang tersedia di halaman Beranda untuk mulai simulasi atau membaca panduan.")
+
+# Main app
+if 'menu' not in st.session_state:
+    st.session_state['menu'] = "Beranda"
+
+menu = st.sidebar.selectbox("Pilih Halaman", [
+    "Beranda",
+    "Keselamatan Kerja (K3)",
+    "Alat Dasar Lab",
+    "Penanganan Bahan Kimia",
+    "Spektrofotometer"
+])
+
+if menu != st.session_state['menu']:
+    st.session_state['menu'] = menu
+
+if st.session_state['menu'] == "Beranda":
+    beranda()
+elif st.session_state['menu'] == "Keselamatan Kerja (K3)":
+    st.title("🛡️ Keselamatan Kerja (K3)")
+    st.write("Informasi dan prosedur keselamatan kerja laboratorium.")
+elif st.session_state['menu'] == "Alat Dasar Lab":
+    st.title("🧰 Alat Dasar Lab")
+    st.write("Panduan alat gelas dasar laboratorium dan simulasi pengukuran volume.")
+elif st.session_state['menu'] == "Penanganan Bahan Kimia":
+    st.title("🧴 Penanganan Bahan Kimia")
+    st.write("Tips dan aturan penanganan bahan kimia yang aman.")
+elif st.session_state['menu'] == "Spektrofotometer":
+    st.title("🔬 Simulasi Spektrofotometer UV-Vis")
+    st.subheader("🔬 1. Simulasi Spektrum UV-Vis (λ Maksimal)")
+    st.write("Simulasi ini menampilkan grafik absorbansi terhadap panjang gelombang.")
 
 # ==================== Halaman Spektrofotometer ====================
 elif menu == "🔬 Spektrofotometer":
