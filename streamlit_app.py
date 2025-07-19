@@ -21,7 +21,7 @@ menu = st.sidebar.selectbox(
 )
 
 # ==================== Halaman Beranda ====================
-if menu == "🏠 Beranda":
+def menu == "🏠 Beranda":
     st.title("💡 Aplikasi Science, Lab & Education")
     st.markdown("""
     ## Selamat Datang 👋
@@ -40,7 +40,7 @@ elif menu == "🔬 Spektrofotometer":
     input_uvvis = st.text_area("Masukkan data panjang gelombang dan absorbansi (λ [nm], Absorbansi)", contoh_data, height=150)
 
     df_uv = None
-    if input_uvvis:
+    def input_uvvis:
         try:
             lines = input_uvvis.strip().split('\n')
             data = [tuple(map(float, line.split(','))) for line in lines]
@@ -48,7 +48,7 @@ elif menu == "🔬 Spektrofotometer":
         except Exception as e:
             st.error(f"Gagal membaca data teks: {e}")
 
-    if df_uv is not None:
+    def df_uv is not None:
         idx_max = df_uv["Absorbansi"].idxmax()
         lambda_max = df_uv.loc[idx_max, "Panjang Gelombang (nm)"]
         st.success(f"λ maks terdeteksi pada: {lambda_max} nm")
@@ -121,7 +121,7 @@ elif menu == "🔬 Spektrofotometer":
             st.error("Slope tidak boleh nol.")
 
 # ==================== Halaman Penanganan Bahan Kimia ====================
-elif menu == "🧴 Penanganan Bahan Kimia":
+def menu == "🧴 Penanganan Bahan Kimia":
     st.title("🧴 Penanganan Bahan Kimia")
 
     st.markdown("""
@@ -488,7 +488,7 @@ elif menu == "🧴 Penanganan Bahan Kimia":
 
 
 # ==================== Halaman K3 ====================
-elif menu == "🛡 Keselamatan Kerja (K3)":
+def  menu == "🛡 Keselamatan Kerja (K3)":
     st.title("🧪🔬 Keselamatan Kerja di Laboratorium Kimia 🧤🦺")
 
     st.markdown("""
@@ -569,7 +569,7 @@ Dengan disiplin dan kesadaran, kita bisa menciptakan laboratorium yang:
 """)
 
 # ==================== Halaman Alat Dasar Lab ====================
-elif menu == "🧰 Alat Dasar Lab":
+def menu == "🧰 Alat Dasar Lab":
     st.title("🧰 Peralatan Dasar Laboratorium Kimia")
 
     st.markdown("""
