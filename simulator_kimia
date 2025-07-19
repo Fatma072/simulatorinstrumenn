@@ -1,0 +1,9 @@
+simulator_kimia/
+├── streamlit_app.py              ← Halaman utama
+├── requirements.txt              ← Berisi daftar library
+└── pages/                        ← Folder wajib untuk menu kiri
+    ├── 1_Spektrofotometer.py
+    ├── 2_Titrasi.py
+    ├── 3_Kromatografi.py
+    ├── 4_Penanganan_Bahan_Kimia.py
+    └── 5_Keselamatan_Kerja_K3.py
