@@ -119,8 +119,7 @@ elif menu == "🔬 Spektrofotometer":
             st.error("Slope tidak boleh nol.")
 
 # ==================== Halaman Penanganan Bahan Kimia ====================
-     import streamlit as st
-
+    
 st.title("🧴 Penanganan Bahan Kimia")
 
 bahan = st.selectbox("Pilih bahan kimia:", [
