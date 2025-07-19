@@ -21,7 +21,7 @@ menu = st.sidebar.selectbox(
 )
 
 # ==================== Halaman Beranda ====================
-def menu == "🏠 Beranda":
+def  menu == "🏠 Beranda":
     st.title("💡 Aplikasi Science, Lab & Education")
     st.markdown("""
     ## Selamat Datang 👋
@@ -30,7 +30,7 @@ def menu == "🏠 Beranda":
     """)
 
 # ==================== Halaman Spektrofotometer ====================
-elif menu == "🔬 Spektrofotometer":
+def menu == "🔬 Spektrofotometer":
     st.title("🔬 Simulasi Spektrofotometer UV-Vis")
 
     st.subheader("🔬 1. Simulasi Spektrum UV-Vis (λ Maksimal)")
@@ -40,7 +40,7 @@ elif menu == "🔬 Spektrofotometer":
     input_uvvis = st.text_area("Masukkan data panjang gelombang dan absorbansi (λ [nm], Absorbansi)", contoh_data, height=150)
 
     df_uv = None
-    def input_uvvis:
+    if input_uvvis:
         try:
             lines = input_uvvis.strip().split('\n')
             data = [tuple(map(float, line.split(','))) for line in lines]
@@ -48,7 +48,7 @@ elif menu == "🔬 Spektrofotometer":
         except Exception as e:
             st.error(f"Gagal membaca data teks: {e}")
 
-    def df_uv is not None:
+    if df_uv is not None:
         idx_max = df_uv["Absorbansi"].idxmax()
         lambda_max = df_uv.loc[idx_max, "Panjang Gelombang (nm)"]
         st.success(f"λ maks terdeteksi pada: {lambda_max} nm")
