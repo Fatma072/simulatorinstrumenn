@@ -21,7 +21,7 @@ menu = st.sidebar.selectbox(
 )
 
 # ==================== Halaman Beranda ====================
-def  menu == "🏠 Beranda":
+if menu == "🏠 Beranda":
     st.title("💡 Aplikasi Science, Lab & Education")
     st.markdown("""
     ## Selamat Datang 👋
