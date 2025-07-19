@@ -22,7 +22,7 @@ menu = st.sidebar.selectbox(
 
 # ==================== Halaman Beranda ====================
 if menu == "🏠 Beranda":
-    st.title("💡 Aplikasi SciLabEdu")
+    st.title("💡 Aplikasi Science, Lab & Education")
     st.markdown("""
     ## Selamat Datang 👋
     Aplikasi ini membantu Anda memahami berbagai simulasi instrumen laboratorium kimia, 
