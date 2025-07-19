@@ -144,7 +144,7 @@ elif menu == "🧴 Penanganan Bahan Kimia":
         - Tidak mudah menguap, namun sangat reaktif  
         - Daya hancur tinggi terhadap jaringan hidup dan sebagian besar material
 
-        **Risiko Pajanan:**  
+        **Risiko yang terjadi:**  
         - Kontak dengan kulit: luka bakar parah  
         - Uapnya: iritasi saluran pernapasan  
         - Jika tercampur air: menghasilkan panas ekstrem dan percikan
@@ -174,7 +174,7 @@ elif menu == "🧴 Penanganan Bahan Kimia":
         - Bersifat higroskopis (menyerap uap air)  
         - Membentuk larutan yang sangat basa dan panas saat dilarutkan
 
-        **Risiko Pajanan:**  
+        **Risiko yang terjadi:**  
         - Iritasi atau luka bakar berat pada kulit dan mata  
         - Dapat menyebabkan kerusakan permanen jika kontak mata lama  
         - Uap dapat menyebabkan iritasi saluran pernapasan
@@ -204,7 +204,7 @@ elif menu == "🧴 Penanganan Bahan Kimia":
         - Berbau khas (seperti pelarut cat kuku)  
         - Digunakan sebagai pelarut di banyak industri
 
-        **Risiko Pajanan:**  
+        **Risiko yang terjadi:**  
         - Menghirup uapnya menyebabkan pusing, sakit kepala, mual  
         - Kontak kulit menyebabkan kekeringan dan iritasi  
         - Bahaya kebakaran tinggi bahkan pada suhu ruangan
@@ -234,7 +234,7 @@ elif menu == "🧴 Penanganan Bahan Kimia":
         - Konsentrasi tinggi (di atas 30%) sangat berbahaya  
         - Digunakan sebagai desinfektan dan agen pemutih
 
-        **Risiko Pajanan:**  
+        **Risiko yang terjadi:**  
         - Kulit: luka bakar, iritasi  
         - Mata: iritasi serius atau kebutaan permanen  
         - Reaksi eksplosif jika kontak logam, bahan organik, atau panas
