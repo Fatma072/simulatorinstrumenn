@@ -84,7 +84,7 @@ menu = st.sidebar.selectbox(
 
 # ==================== Halaman Beranda ====================
 if menu == "🏠 Beranda":
-    st.title("💡 Aplikasi Simulator Instrumen Kimia")
+
 
 
 # ==================== Halaman Spektrofotometer ====================
