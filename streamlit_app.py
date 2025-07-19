@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
 
 # Konfigurasi halaman
-st.set_page_config(page_title="Simulator Kimia", layout="wide")
+st.set_page_config(page_title="SciLabEdu", layout="wide")
 
 # Sidebar menu
 menu = st.sidebar.selectbox(
@@ -22,7 +22,7 @@ menu = st.sidebar.selectbox(
 
 # ==================== Halaman Beranda ====================
 if menu == "🏠 Beranda":
-    st.title("💡 Aplikasi Simulator Instrumen Kimia")
+    st.title("💡 Aplikasi SciLabEdu")
     st.markdown("""
     ## Selamat Datang 👋
     Aplikasi ini membantu Anda memahami berbagai simulasi instrumen laboratorium kimia, 
