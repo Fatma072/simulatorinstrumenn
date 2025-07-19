@@ -636,15 +636,14 @@ elif menu == "🧰 Alat Dasar Lab":
     st.success(f"📦 **Total Volume Cairan (tanpa error):** {total_volume:.2f} mL")
     st.info(f"⚠️ **Dengan toleransi pengukuran: ±{abs(total_error):.2f} mL**")
 
-    st.markdown("---")
-    st.subheader("🧠 Kuis Cepat: Peralatan Gelas")
-
-    with st.form("kuis_alat"):
-      
-# Data soal: list of dict (soal, pilihan, jawaban benar)
+# Konfigurasi halaman
 st.set_page_config(page_title="Kuis Peralatan Gelas", layout="centered")
 
-# Daftar soal (isi dengan pertanyaan sesuai kebutuhan)
+# Garis pemisah dan judul
+st.markdown("---")
+st.subheader("🧠 Kuis Cepat: Peralatan Gelas")
+
+# Daftar soal
 soal_list = [
     {
         "question": "Apa nama alat gelas ini yang digunakan untuk mengukur volume dengan akurasi tinggi?",
@@ -673,11 +672,10 @@ soal_list = [
     },
 ]
 
-# Pilih 3 soal secara acak tiap kali aplikasi dijalankan
+# Pilih 3 soal secara acak
 soal_terpilih = random.sample(soal_list, 3)
 
-st.subheader("🧠 Kuis Cepat: Peralatan Gelas")
-
+# Form kuis
 with st.form("kuis_alat"):
     jawaban_user = []
     for i, soal in enumerate(soal_terpilih):
@@ -690,6 +688,7 @@ with st.form("kuis_alat"):
 
     submit = st.form_submit_button("💡 Cek Jawaban")
 
+# Evaluasi hasil
 if submit:
     benar = 0
     for i, soal in enumerate(soal_terpilih):
