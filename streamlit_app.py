@@ -84,7 +84,7 @@ menu = st.sidebar.selectbox(
 
 # ==================== Halaman Beranda ====================
 if menu == "🏠 Beranda":
-
+    pass
 
 
 # ==================== Halaman Spektrofotometer ====================
